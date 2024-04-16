@@ -1,0 +1,1587 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: rgba(33, 37, 41, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* HEADER NAVBAR - MOBILE */
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+}
+.header-width {
+    width: 80%;
+}
+.bg-color {
+    background-color: rgba(33, 37, 41, 1);
+}
+.header-logo {
+    width: 85px;
+    height: 28px;
+}
+.navbar-toggler {
+    border: 1px solid white;
+}
+.navbar-toggler:focus {
+    border: none !important;
+}
+.navbar-toggler-icono {
+    color: white;
+}
+.nav-item hr {
+    margin: 1.5rem 0;
+}
+.dropdown-menu {
+    border: none;
+}
+.icono-usuario {
+    display: none !important;
+}
+.menu-hamburguesa {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.menu-hamburguesa hr {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* 
+
+PARA 3ER ENTREGA:
+- Modificar la imagen del menu hamburguesa con lineas blancas
+- Sacarle el borde negro al hacer click en el menu (active o focus)
+- Ver como sacarle el borde al menu hamburguesa al hacer focus, sin el !important
+- Ajustar el icono del user sin el !important (y en version desktop tambien sacarle el !important)
+- Agregar icono de 'home' en el inicio del menu hamburguesa
+
+*/
+
+
+/* NOSOTROS - MOBILE */
+.banner-nosotros {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/banner-nosotros.jpg");
+    /* object-fit: cover; */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.empresa-container {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empresa {
+    width: 100%;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.empresa-texto {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    gap: 20px;
+}
+.empresa-texto div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.empresa-texto div h2 {
+    font-size: 22px;
+    text-align: left;
+}
+.empresa-texto div hr {
+    width: 50px;
+    margin-top: 15px;
+}
+.empresa-images {
+    width: 100%;
+}
+.empresa-images img {
+    width: 100%;
+    /* height: 350px; */
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+.empresa-images .empresa-img2 {
+    display: none;
+}
+
+
+.empresa-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: right;
+    gap: 60px;
+    margin-bottom: 100px;
+    /* margin-top: 20px; */
+}
+.banner-hr {
+    width: 100%;
+}
+.banner-hr hr {
+    width: 35%;
+    /* opacity: 50%; */
+}
+.empresa-banner-texto {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+.empresa-banner-texto p {
+    font-weight: 900;
+    line-height: 55px;
+}
+.empresa-banner-texto .txt1 {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.5px 0.5px 1.5px rgb(118, 118, 118), -0.5px 0.5px 1.5px rgb(118, 118, 118), 0.5px -0.5px 1.5px rgb(118, 118, 118), -0.5px -0.5px 1.5px rgb(118, 118, 118);
+}
+.empresa-banner-texto .txt2 {
+    font-size: 45px;
+    transition: 0.3s;
+}
+.empresa-banner:hover .txt2 {
+    color: rgb(243, 230, 51);
+}
+
+
+.cards-container {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 65px 0;
+}
+.cards-container article {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-box {
+    width: 350px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.card-imagen {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+}
+.card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    position: absolute;
+}
+.frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.dorso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.53);
+    position: absolute;
+    top: 0;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+}
+.dorso h2 {
+    font-size: 14px;
+    font-weight: 300;
+    width: 80%;
+    color: white;
+}
+.dorso hr {
+    width: 50px;
+    color: white;
+    opacity: 100%;
+}
+.card-imagen:hover .frente {
+    transform: perspective(600px) rotateY(180deg);
+}
+.card-imagen:hover .dorso {
+    transform: perspective(600px) rotateY(360deg);
+}
+.etapa-card-texto {
+    width: 71%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.etapas-titulo {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.etapas-titulo h2 {
+    font-size: 24px;
+}
+.etapas-titulo span {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* 
+
+PARA 3ER ENTREGA: 
+- Revisar y ajustar en la version tablet el tamaño de la primer imagen
+- Agregar efecto degrade al girarse cada card
+- Rediseñar seccion de las 3 etapas. Probar 2 formatos diferentes para el responsive de cel y tablet con display row. Img a la dcha mas grande y el txt a la izq. Probar tmb row-inverse
+
+*/
+
+.servicios-container {
+    width: 100%;
+    height: 550px;
+    /* background-color: rgb(48, 48, 48); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.servicios-box {
+    width: 80%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+.servicios-titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+.servicios-titulo h2 {
+    font-weight: 700;
+    font-size: 24px;
+}
+.servicios-titulo hr {
+    width: 50px;
+    margin-top: 15px;
+}
+
+.accordion {
+    --bs-accordion-active-bg: whitesmoke;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-btn-icon-transform: rotate(-90deg)
+}
+.accordion-css {
+    border: none;
+}
+.accordion-button:hover {
+    background-color: whitesmoke;
+}
+.accordion-item {
+    border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+
+/* PROYECTOS - MOBILE */
+.banner-proyectos {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/banner-proyectos.jpg");
+    /* object-fit: cover; */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.banner-main div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.banner-main div h1 {
+    font-size: 28px;
+    font-weight: 700
+}
+.proyectos-encabezado {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.proyectos-encabezado div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    /* margin-top: 30px; */
+}
+.proyectos-encabezado h2 {
+    font-size: 20px;
+    margin-top: 40px;
+}
+.proyectos-encabezado hr {
+    width: 50px;
+    margin-top: 10px;
+}
+.proyectos-container {
+    width: 100%;
+    height: 1450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.proyectos-grid {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+    grid-template-areas:
+        "img1 img2"
+        "img3 img3"
+        "img3 img3"
+        "img4 img5"
+        "img6 img6"
+        "img6 img6"
+        "img7 img8";
+    grid-gap: 5px;
+}
+.proyecto-card {
+    position: relative;
+    overflow: hidden;
+}
+.proyecto-card a {
+    text-decoration: none;
+}
+.proyecto-card-datos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.60);
+    color: white;
+    /* padding: 20px; */
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    gap: 5px;
+    transition: 0.8s;
+}
+.proyecto-card-datos div h2 {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.proyecto-card-datos div p {
+    color: white;
+}
+.proyecto-card-datos:hover {
+    opacity: 1;
+}
+.proyecto-card-datos div button {
+    width: 70px;
+    height: 25px;
+    font-size: 12px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proyecto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+.proyecto-card:hover img {
+    transform: scale(1.1);
+}
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.img5 {
+    grid-area: img5;
+}
+.img6 {
+    grid-area: img6;
+}
+.img7 {
+    grid-area: img7;
+}
+.img8 {
+    grid-area: img8;
+}
+.mas-proyectos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.mas-proyectos span {
+    font-weight: 600;
+}
+
+/* 
+
+PARA 3ER ENTREGA:
+- Revisar y ajustar font-size de los h2 y p de cada img
+
+*/
+
+/* DISEÑO - MOBILE */
+
+
+/* CONTACTO - MOBILE */
+.banner-contacto {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/banner-contacto.jpg");
+    /* object-fit: cover; */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.contacto-container {
+    width: 100%;
+    height: 1120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacto {
+    width: 80%;
+    /* max-width: 1200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+.datos-container {
+    /* width: 40%; */
+    display: none;
+}
+.datos-titulo,
+.datos-box {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.datos-titulo h2 {
+    font-size: 22px;
+    font-weight: 800;
+}
+.datos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+.datos-icono {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(34, 34, 34);
+    border-radius: 100%;
+}
+.datos-icono i {
+    text-align: center;
+    color: rgb(34, 34, 34);
+    display: flex;
+    align-items: flex-start;
+}
+.datos-texto {
+    display: flex;
+    flex-direction: column;
+}
+.datos-texto h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.datos-titulo-secundario {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.datos-titulo-secundario h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+.contacto form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 20px;
+    /* padding: 0 35px; */
+    border-top: 1px solid gray;
+    padding-top: 50px;
+}
+.contacto form h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.contacto form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.contacto form div input {
+    width: 45%;
+}
+.contacto form div textarea {
+    width: 100%;
+}
+.contacto form div input,
+.contacto form div textarea {
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 0.5px #a5a5a577 solid;
+    outline: none;
+}
+.contacto form div p,
+.contacto form div button {
+    width: 100%;
+}
+.contacto form div p {
+    display: none;
+}
+.contacto form div button {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+.mapa-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mapa {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    filter: hue-rotate(325deg);
+}
+.contacto-txt-container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contacto-txt-box,
+.contacto-txt div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.contacto-txt-box {
+    gap: 35px;
+}
+.contacto-txt-box hr {
+    height: 0.5px;
+    width: 60px;
+    color: #000;
+}
+.contacto-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contacto-txt h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.contacto-txt p {
+    width: 60%;
+}
+.contacto-txt div span {
+    font-weight: 600;
+    border: 2px solid black;
+    padding: 12px;
+}
+
+
+/*  FOOTER MOBILE */
+.footer-container {
+    width: 100%;
+    height: 830px;
+    color: white;
+    background: rgba(33, 37, 41, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+.footer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+.footer-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-logo img {
+    width: 140px;
+    height: 45px;
+}
+.footer hr {
+    display: flex;
+    width: 50px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.footer article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.footer article nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.footer article nav ul a {
+    color: white;
+    text-decoration: none;
+}
+.footer article nav,
+.footer-contacto,
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+.footer-contacto {
+    align-items: center;
+}
+.footer-newsletter {
+    width: 100%;
+}
+.footer nav h2,
+.footer-contacto h2,
+.footer-newsletter h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+.footer-datos-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.footer-datos {
+    display: flex;
+    justify-content: flex-start;
+}
+.footer-datos p {
+    color: white;
+}
+.footer-contacto div i {
+    color: white;
+    width: 30px;
+}
+.mail-newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.mail-newsletter input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 7px;
+    border: 0.5px solid grey;
+}
+.iconos-redes {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.redes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.iconos-redes a {
+    width: 30px;
+}
+.iconos-redes i {
+    font-size: 20px;
+    color: white;
+}
+.iconos-redes button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #0056d7;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+}
+.iconos-redes button:hover {
+    background-color: #0545a6;
+    cursor: pointer;
+}
+.copyright {
+    width: 80%;
+    border-top: 1px solid white;
+    padding-top: 15px;
+    text-align: center;
+}
+.copyright p {
+    font-size: 12px;
+    color: white;
+}
+
+
+@media (min-width: 768px) {
+    /* NOSOTROS TABLET */
+    .empresa-container {
+        height: 950px;
+    }
+    .emrpesa {
+        gap: 90px;
+    }
+    .empresa-banner {
+        height: 300px;
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+    .empresa-banner-texto p {
+        line-height: 80px;
+    }
+    .empresa-banner-texto .txt1 {
+        font-size: 45px;
+    }
+    .empresa-banner-texto .txt2 {
+        font-size: 80px;
+    }
+    .cards-container article {
+        width: 90%;
+        flex-direction: row;
+        gap: 0;
+    }
+    .card-box {
+        height: 420px;
+        gap: 30px;
+    }
+    .card-imagen {
+        width: 160px;
+        height: 160px;
+    }
+    .dorso h2 {
+        font-size: 16px;
+    }
+    .etapas-titulo h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .servicios-container {
+        /* height: 600px; */
+        margin-bottom: 0;
+    }
+    .servicios-box {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* margin-top: 50px; */
+    }
+    .servicios-titulo {
+        width: 45%;
+        /* margin-bottom: 10px; */
+    }
+    .servicios-titulo h2 {
+        font-size: 30px;
+    }
+    .servicios-titulo p {
+        width: 60%;
+    }
+    .accordion {
+        width: 50%;
+    }
+
+
+    /* PROYECTOS TABLET */
+    .proyectos-container {
+        height: 900px;
+    }
+    .proyectos-encabezado h2 {
+        font-size: 22px;
+    }
+    .proyectos-grid {
+        width: 75%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 180px;
+        grid-template-areas:
+            "img1 img1 img2"
+            "img3 img4 img4"
+            "img5 img5 img6"
+            "img7 img8 img8";
+        grid-gap: 7px;
+    }
+    .proyecto-card-datos {
+        gap: 7px;
+    }
+    .mas-proyectos span {
+        font-size: 16px;
+    }
+
+
+    /* DISEÑOS TABLET */
+
+
+    /* CONTACTO TABLET */
+    .contacto-container {
+        height: 650px;
+    }
+    .contacto {
+        flex-direction: row;
+        gap: 50px;
+    }
+    .datos-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* gap: 40px; */
+        gap: 35px;
+    }
+    .datos-icono {
+        width: 37px;
+        height: 37px;
+    }
+    .datos-titulo h2 {
+        font-size: 35px;
+    }
+    .datos-titulo-secundario {
+        gap: 18px;
+    }
+    .contacto form {
+        border-top: none;
+        padding-top: 0px;
+        margin-top: 15px;
+    }
+    .contacto form div textarea {
+        height: 175px;
+    }
+
+
+    /* FOOTER TABLET */
+    .footer-container {
+        height: 100%;
+        padding: 40px 0;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-logo {
+        justify-content: flex-start;
+    }
+    .footer hr {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .footer article {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .footer article nav,
+    .footer-contacto,
+    .footer-newsletter {
+        text-align: left;
+    }
+    .footer article nav {
+        width: 30%;
+    }
+    .footer-contacto {
+        width: 60%;
+        align-items: flex-start;
+    }
+    .footer-datos-box {
+        align-items: flex-start;
+    }
+    .footer-logo,
+    .footer article,
+    .footer-newsletter {
+        width: 100%;
+    }
+    .iconos-redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .redes {
+        justify-content: flex-start;
+    }
+    .iconos-redes button {
+        width: 150px;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    /* INDEX DESKTOP - Flta convertilo en responsive */
+    .nosotros-container {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nosotros-index {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+    .nosotros-index-imagen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nosotros-index-imagen img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+    .nosotros-index-texto {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: justify;
+        gap: 30px;
+        padding: 0 60px 0 20px;
+    }
+    .nosotros-index-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nosotros-index-info div{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    .nosotros-index-info h1 {
+        font-size: 24px;
+    }
+    .nosotros-index-info hr{
+        width: 100px;
+        margin-top: 15px;
+    }
+    .nosotros-index-texto div a {
+        text-decoration: none;
+        font-weight: 700;
+        border: 0.5px solid black;
+        border-radius: 4px;
+        padding: 6px;
+    }
+    
+    
+    .datos-random-container {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .datos-random {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+    }
+    .datos-random article {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-right: 50px;
+    }
+    .datos-random article:not(:last-child) {
+        border-right: 1px solid black;
+    }
+    .datos-random article h2 {
+        font-size: 60px;
+        font-weight: 900;
+    }
+    .datos-random article p {
+        font-size: 24px;
+    }
+    
+    
+    .secciones-container {
+        width: 100%;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    .secciones {
+        width: 100%;
+        height: 650px;
+        display: flex;
+        /* mutear linea 295 si afecta en el responsive */
+        position: absolute;
+    }
+    .secciones-descripcion {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* mutear lineas 303-305 si afecta en el responsive */
+        position: relative;
+        top: 120px;
+        left: 120px;
+    }
+    .secciones-descripcion h2 {
+        font-size: 40px;
+    }
+    .secciones-descripcion p {
+        width: 50%;
+        text-align: justify;
+    }
+    .secciones-card1 {
+        background-image: url("../images/proyecto2.jpg");
+    }
+    .secciones-card2 {
+        background-image: url("../images/proyecto7.jpg");
+    }
+    .secciones-card3 {
+        background-image: url("../images/proyecto8.jpg");
+    }
+    .secciones-card1, .secciones-card2, 
+    .secciones-card3 {
+        /* background-image: url("../images/proyecto2.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 25%;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .secciones-titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+    }
+    .secciones-titulo h2 {
+        writing-mode: vertical-rl;
+    }
+    .secciones-titulo div {
+        padding-right: 15px;
+    }
+    .secciones-titulo hr {
+        writing-mode: vertical-rl;
+        height: 150px;
+    }
+    .secciones-texto span {
+        font-size: 46px;
+        font-weight: 900;
+    }
+    .secciones-texto p {
+        display: none;
+        /* Hacer que el texto solo aparezca al posar el cursor sobre la imagen */
+    }
+    
+    
+    .newsletter-container {
+        width: 100%;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsletter {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .newsletter div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .newsletter div h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .newsletter form {
+        display: flex;
+        gap: 20px;
+    }
+    .newsletter form input,
+    .newsletter form button {
+        padding: 15px;
+        border-radius: 5px;
+        border: 0.5px solid grey;
+    }
+    .news-name {
+        width: 30%;
+    }
+    .news-email {
+        width: 50%;
+    }
+    .newsletter form button {
+        width: 20%;
+        color: white;
+        background-color: black;
+        border: none;
+        font-weight: 600;
+    }
+
+
+    /* HEADER NAVBAR - DESKTOP */
+    .nav-item hr {
+        display: none;
+    }
+    .usuario{
+        display: none;
+    }
+    .icono-usuario {
+        display: block !important;
+        color:rgb(197, 197, 197);
+    }
+    .offcanvas-ul {
+        align-items: center;
+    }
+    .nav-link {
+        color:rgb(197, 197, 197);
+    }
+    .nav-link:hover {
+        color: white;
+        font-weight: 600;
+        scale: 1.1;
+    }
+    .icono-usuario:hover {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    /* .nav-width {
+    width: 100%;
+    margin: 0 auto;
+    } */
+    /* .container-fluid {
+    width: 80%;
+    } */
+
+    /* 
+
+    PARA 3ER ENTREGA:
+    - Modificar efecto de la flecha despues de clickearla. Que se mantenga blanca en vez de negro
+    - Intentar ubicar link en el centro pero dejar el icono de login en el margen derecho
+    - Darle borde al dropdown
+
+    */
+
+
+    /* NOSOTROS DESKTOP */
+    .empresa-container {
+        height: 600px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .empresa {
+        width: 80%;
+        flex-direction: row;
+    }
+    .empresa-texto {
+        width: 45%;
+    }
+    .empresa-images {
+        width: 50%;
+        position: relative;
+        transition: 0.5s;
+    }
+    .empresa-images img {
+        height: 350px;
+        border-radius: 20px;
+        transition: 0.7s;
+    }
+    .empresa-images .empresa-img2 {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .empresa-images:hover .empresa-img2 {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+    .empresa-banner-texto .txt1,
+    .empresa-banner-texto .txt2 {
+        font-size: 75px;
+    }
+    .cards-container {
+        height: 600px;
+    }
+    .cards-container article {
+        width: 70%;
+        max-width: 1000px;
+        flex-direction: row;
+        gap: 40px;
+    }
+    .card-box {
+        height: 550px;
+    }
+    .etapas-titulo {
+        gap: 10px;
+    }
+    .etapa-card-texto{
+        width: 80%;
+    }
+
+
+    /* PROYECTOS DESKTOP */
+    .proyectos-container {
+        height: 1200px;
+    }
+    .proyectos-encabezado h2 {
+        font-size: 22px;
+    }
+    .proyectos-grid {
+        width: 70%;
+        /* max-width: 1200px; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 250px;
+        grid-template-areas:
+            "img1 img1 img1 img2"
+            "img3 img3 img4 img4"
+            "img3 img3 img5 img6"
+            "img7 img8 img8 img6";
+    }
+    .proyecto-card-datos {
+        gap: 7px;
+    }
+    .mas-proyectos span {
+        font-size: 16px;
+    }
+
+
+    /* DISEÑOS DESKTOP - Falta convertilo en responsive */
+    .modelos-banner {
+        width: 100%;
+        display: flex;
+    }
+    .modelos-banner img {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .modelos-encabezado {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 150px auto 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid black;
+    }
+    .modelos-filtro {
+        display: flex;
+        align-items: center;
+    }
+    .modelos-filtro span {
+        padding: 0 20px;
+    }
+    .modelos-container {
+        margin: 0px auto 150px;
+    }
+    .modelos-container article {
+        width: 80%;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+        margin: 0 auto;
+    }
+    .modelos-container article h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 60px 0px 30px;
+    }
+    .modelos-container article span,
+    .modelos div span {
+        font-weight: 300;
+    }
+    .modelos {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    /* .modelos div:not(:last-child){
+        margin-right: 5px;
+    } */
+    .modelos div p {
+        font-weight: 500;
+        margin: 10px 0px 5px
+    }
+    .modelos img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /* CONTACTO DESKTOP */
+    .contacto-container {
+        height: 800px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .datos-container {
+        position: relative;
+    }
+    .datos-titulo h2 {
+        font-size: 70px;
+        position: absolute;
+        top: -50px;
+        left: -60px;
+    }
+    .datos-titulo p {
+        margin-top: 50px;
+    }
+    .datos {
+        gap: 25px;
+    }
+    .datos-icono {
+        width: 45px;
+        height: 45px;
+    }
+    .datos-icono i {
+        font-size: 20px;
+    }
+    .datos-texto {
+        gap: 5px;
+    }
+    .datos-texto h2 {
+        font-size: 18px;
+    }
+    .datos-titulo-secundario h2 {
+        font-size: 20px;
+    }
+    .contacto form {
+        margin-top: 0;
+    }
+    .contacto form div input,
+    .contacto form div textarea {
+        padding: 15px 10px;
+    }
+    .contacto form h1 {
+        font-size: 22px;
+    }
+    .contacto form div p {
+        display: block;
+        width: 80%;
+        color: black;
+        font-size: 13px;
+        font-style: italic;
+    }
+    .contacto form div button {
+        width: 30%;
+        padding: 10px 15px;
+    }
+    .mapa {
+        height: 350px;
+    }
+    .contacto-txt h2 {
+        font-size: 24px;
+    }
+
+
+    /* FOOTER DESKTOP */
+    .footer-container {
+        height: 300px;
+    }
+    .footer {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .footer-logo {
+        width: 20%;
+    }
+    .footer-container hr {
+        display: none;
+    }
+    .footer article {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+    .footer-newsletter {
+        width: 30%;
+    }
+    .footer-datos-box {
+        width: 100%;
+    }
+    .iconos-redes button {
+        width: 160px;
+    }
+    .copyright {
+        text-align: left;
+    }
+}
