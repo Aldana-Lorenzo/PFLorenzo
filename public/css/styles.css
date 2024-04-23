@@ -29,32 +29,81 @@ ul {
 }
 
 
-/* HEADER NAVBAR - MOBILE */
+/*
+
+PENDIENTES:
+MARTES 23
+Diseños:
+- Armar el carrusel de cards y triplicarlo para los 3 tipos de diseños a ofrecer
+- Hacer responsive la pagina
+
+
+MIERCOLES 24
+Diseños:
+- Armar textos (Crear nombres de diseños prediseñados o numerarlos y agregar medidas de superficies)
+
+
+---------------------------------------------------
+
+
+VIERNES 3 DE MAYO
+GENERAL
+- Buscar 2 nuevas tipografias
+- Buscar imagenes menos pesadas
+- Vincular todas las imagenes en sus respectivos HTML y completar el alt="..." de cada una
+
+
+SABADO 4 DE MAYO
+NOSOTROS
+- Rediseñar seccion de las 3 etapas. Probar 2 formatos diferentes para el responsive de cel y tablet con display row. Img a la dcha mas grande y el txt a la izq. Probar tmb row-inverse.
+- Agregar efecto degrade al girarse cada card
+
+
+DOMINGO 5 DE MAYO
+NAVBAR
+- Ajustar el icono del user sin el !important
+- Revisar la animacion del subrayado
+
+GENERAL
+- Alinear font-size y font-weight de titulos, parrafos y span
+
+*/
+
+
+/* NAVBAR MOBILE */
 .navbar {
-    width: 100%;
-    margin: 0 auto;
+    width: 100vw;
+    margin: 0;
+    transition: 0.5s;
 }
-.header-width {
+.container {
     width: 80%;
 }
 .bg-color {
-    background-color: rgba(33, 37, 41, 1);
+    background-color: transparent;
+} 
+.navbar-scrolled {
+    background-color: rgb(33, 37, 41);
 }
 .header-logo {
     width: 85px;
     height: 28px;
 }
 .navbar-toggler {
-    border: 1px solid white;
+    border: none;
+    /* border: 1px solid rgb(197, 197, 197); */
 }
-.navbar-toggler:focus {
-    border: none !important;
+.navbar-toggler:focus,
+.btn-close:focus,
+.dropdown-toggle:focus {
+    box-shadow: none;
+    outline: none;
 }
-.navbar-toggler-icono {
-    color: white;
+.navbar-toggler-icon {
+    background-image: url("../images/menu-hamburguesa.png")
 }
 .nav-item hr {
-    margin: 1.5rem 0;
+    margin: 1rem 0.4rem;
 }
 .dropdown-menu {
     border: none;
@@ -62,49 +111,118 @@ ul {
 .icono-usuario {
     display: none !important;
 }
-.menu-hamburguesa {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.menu-hamburguesa hr {
-    display: flex;
-    margin-bottom: 10px;
-    width: 100%;
+.user-icon-container {
+    display: none;
 }
 
-/* 
-
-PARA 3ER ENTREGA:
-- Modificar la imagen del menu hamburguesa con lineas blancas
-- Sacarle el borde negro al hacer click en el menu (active o focus)
-- Ver como sacarle el borde al menu hamburguesa al hacer focus, sin el !important
-- Ajustar el icono del user sin el !important (y en version desktop tambien sacarle el !important)
-- Agregar icono de 'home' en el inicio del menu hamburguesa
-
-*/
-
-
-/* NOSOTROS - MOBILE */
-.banner-nosotros {
+/* HEADER MOBILE */
+.banner {
     width: 100%;
     height: 100vh;
-    background-image: url("../images/banner-nosotros.jpg");
-    /* object-fit: cover; */
-    background-position: center;
+}
+.banner-img {
+    width: 100%;
+    height: 100%;
+}
+.banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+.banner-txt {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner-txt div {
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 5px;
+}
+.banner-txt h1 {
+    font-size: 20px;
+    font-weight: 800;
     color: white;
 }
+.banner-txt p {
+    color: white;
+    line-height: 20px;
+}
+
+/* BOTON FLOTANTE */
+#btn-mas {
+    display: none;
+}
+.boton-flotante {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 100;
+}
+.btn-redes a, .btn-mas, .btn-mas i {
+    display: flex;
+    text-decoration: none;
+    background: #0056d7;
+    color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px rgba(33, 33, 33, 0.9);
+    transition: 0.7s;
+}
+.btn-redes i,
+.btn-mas label i {
+    color: white;
+    font-size: 18px;
+}
+.btn-redes a:hover,
+.btn-mas:hover {
+    background-color: #0545a6;
+}
+.btn-redes a {
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .btn-redes a {
+    margin-bottom: 10px;
+    opacity: 100%;
+    visibility: visible;
+}
+.btn-mas {
+    cursor: pointer;
+    margin-top: 20px;
+}
+#btn-mas:checked~ .btn-mas .fa-plus {
+    transform: rotate(45deg);
+    font-size: 20px;
+}
+
+/* NOSOTROS MOBILE */
 .empresa-container {
     width: 100%;
     height: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* margin: 60px auto; */
 }
 .empresa {
     width: 100%;
@@ -130,7 +248,8 @@ PARA 3ER ENTREGA:
     margin-bottom: 10px;
 }
 .empresa-texto div h2 {
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 700;
     text-align: left;
 }
 .empresa-texto div hr {
@@ -142,7 +261,7 @@ PARA 3ER ENTREGA:
 }
 .empresa-images img {
     width: 100%;
-    /* height: 350px; */
+    height: 100%;
     object-fit: cover;
     object-position: center;
     filter: grayscale(100%);
@@ -151,7 +270,6 @@ PARA 3ER ENTREGA:
 .empresa-images .empresa-img2 {
     display: none;
 }
-
 
 .empresa-banner {
     width: 100%;
@@ -195,7 +313,6 @@ PARA 3ER ENTREGA:
 .empresa-banner:hover .txt2 {
     color: rgb(243, 230, 51);
 }
-
 
 .cards-container {
     width: 100%;
@@ -293,27 +410,19 @@ PARA 3ER ENTREGA:
 }
 .etapas-titulo span {
     font-size: 20px;
+    font-weight: 500;
     margin-top: 5px;
 }
 
-/* 
-
-PARA 3ER ENTREGA: 
-- Revisar y ajustar en la version tablet el tamaño de la primer imagen
-- Agregar efecto degrade al girarse cada card
-- Rediseñar seccion de las 3 etapas. Probar 2 formatos diferentes para el responsive de cel y tablet con display row. Img a la dcha mas grande y el txt a la izq. Probar tmb row-inverse
-
-*/
-
 .servicios-container {
     width: 100%;
-    height: 550px;
+    height: 680px;
     /* background-color: rgb(48, 48, 48); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 .servicios-box {
     width: 80%;
@@ -341,10 +450,14 @@ PARA 3ER ENTREGA:
 .accordion {
     --bs-accordion-active-bg: whitesmoke;
     --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-btn-icon-transform: rotate(-90deg)
+    --bs-accordion-btn-icon-transform: none;
 }
 .accordion-css {
     border: none;
+}
+.accordion-button strong{
+    /* font-size: 16px; */
+    text-transform: uppercase;
 }
 .accordion-button:hover {
     background-color: whitesmoke;
@@ -352,42 +465,25 @@ PARA 3ER ENTREGA:
 .accordion-item {
     border-bottom: 1px solid rgb(205, 205, 205);
 }
+.accordion-button::after {
+    background-image: url("../images/signo-mas.png");
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("../images/signo-menos.png");
+}
 
-
-/* PROYECTOS - MOBILE */
-.banner-proyectos {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../images/banner-proyectos.jpg");
-    /* object-fit: cover; */
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-.banner-main div {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.banner-main div h1 {
-    font-size: 28px;
-    font-weight: 700
-}
+/* PROYECTOS MOBILE */
 .proyectos-encabezado {
     width: 100%;
-    height: 180px;
+    height: 160px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    margin: 15px 0;
 }
 .proyectos-encabezado div {
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -396,9 +492,10 @@ PARA 3ER ENTREGA:
     gap: 8px;
     /* margin-top: 30px; */
 }
-.proyectos-encabezado h2 {
-    font-size: 20px;
-    margin-top: 40px;
+.proyectos-encabezado div h2 {
+    font-size: 18px;
+    font-weight: 700;
+    /* margin-top: 40px; */
 }
 .proyectos-encabezado hr {
     width: 50px;
@@ -454,7 +551,7 @@ PARA 3ER ENTREGA:
 }
 .proyecto-card-datos div h2 {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 .proyecto-card-datos div p {
@@ -520,17 +617,120 @@ PARA 3ER ENTREGA:
     font-weight: 600;
 }
 
-/* 
+/* DISEÑO MOBILE */
+.carousel {
+    width: 100%;
+    height: 800px;
+}
+/* .carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+} */
+.cards-wrapper {
+    display: flex;
+    gap: 10px;
+}
 
-PARA 3ER ENTREGA:
-- Revisar y ajustar font-size de los h2 y p de cada img
-
-*/
-
-/* DISEÑO - MOBILE */
 
 
-/* CONTACTO - MOBILE */
+/* .modelos-encabezado {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 150px auto 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid black;
+    } */
+    /* .modelos-filtro {
+        display: flex;
+        align-items: center;
+    } */
+    /* .modelos-filtro span {
+        padding: 0 20px;
+    } */
+
+    /* .modelos-container {
+        width: 100%;
+        height: 100%;
+        /* max-height: 1200px; *
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    /* .modelos-container article {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    } */
+    /* .modelos-container article h2 {
+        font-size: 16px;
+        font-weight: 600;
+    } */
+
+    /* .modelos-box {
+        display: flex;
+        flex-direction:  column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    } */
+    /* .modelos {
+        position: relative;
+    } */
+    /* .modelos-txt {
+        width: 100%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* gap: 5px; *
+        background-color: black;
+        color: white;
+        padding: 0 30px;
+        opacity: 70%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    } */
+    /* .modelos div:not(:last-child){
+        margin-right: 5px;
+    } */
+    /* .modelos-txt p {
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+    } */
+    /* .modelos-txt span {
+        color: white;
+    } */
+    /* .modelos img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        object-position: center;
+    } */
+
+    /* .carousel {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    } */
+    /* .carousel-inner {
+        width: 100%;
+    } */
+    /* .carousel-item img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+    } */
+
+
+/* CONTACTO MOBILE */
 .banner-contacto {
     width: 100%;
     height: 100vh;
@@ -546,7 +746,7 @@ PARA 3ER ENTREGA:
 }
 .contacto-container {
     width: 100%;
-    height: 1120px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -612,19 +812,20 @@ PARA 3ER ENTREGA:
     font-size: 18px;
     font-weight: 700;
 }
+.contacto-hr {
+    display: none;
+}
 .contacto form {
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: justify;
     gap: 20px;
-    /* padding: 0 35px; */
-    border-top: 1px solid gray;
-    padding-top: 50px;
 }
 .contacto form h1 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
+    margin-left: 5px;
 }
 .contacto form div {
     display: flex;
@@ -661,9 +862,12 @@ PARA 3ER ENTREGA:
     padding: 5px 10px;
     border-radius: 7px;
     border: none;
-    background-color: black;
+    background-color: rgba(33, 37, 41, 1);
     color: white;
     margin-top: 10px;
+}
+.contacto form div button:hover {
+    background-color: rgb(59, 63, 67);
 }
 .mapa-container {
     width: 100%;
@@ -685,14 +889,14 @@ PARA 3ER ENTREGA:
     filter: hue-rotate(325deg);
 }
 .contacto-txt-container {
-    width: 100%;
+    width: 90%;
     height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 15px;
+    margin: 0 auto;
 }
 .contacto-txt-box,
 .contacto-txt div {
@@ -718,24 +922,30 @@ PARA 3ER ENTREGA:
     gap: 20px;
 }
 .contacto-txt h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }
 .contacto-txt p {
     width: 60%;
 }
-.contacto-txt div span {
+.contacto-txt div a {
+    text-decoration: none;
+    color: rgba(33, 37, 41, 1);
     font-weight: 600;
-    border: 2px solid black;
-    padding: 12px;
+    border: 2px solid rgba(33, 37, 41, 1);
+    padding: 8px;
+    transition: 0.5s;
 }
-
+.contacto-txt div a:hover {
+    background-color: rgba(33, 37, 41, 1);
+    color: white;
+}
 
 /*  FOOTER MOBILE */
 .footer-container {
     width: 100%;
     height: 830px;
-    color: white;
+    /* color: white; */
     background: rgba(33, 37, 41, 1);
     display: flex;
     flex-direction: column;
@@ -783,6 +993,9 @@ PARA 3ER ENTREGA:
 .footer article nav ul a {
     color: white;
     text-decoration: none;
+}
+.footer article nav ul a:hover {
+    color: rgb(154, 154, 154);
 }
 .footer article nav,
 .footer-contacto,
@@ -883,12 +1096,29 @@ PARA 3ER ENTREGA:
 
 
 @media (min-width: 768px) {
+    /* HEADER TABLET */
+    .banner {
+        height: 50vh;
+    }
+    .banner-txt {
+        height: 50vh;
+    }
+    .banner-txt div {
+        width: 55%;
+    }
+    .banner-txt h1 {
+        font-size: 22px;
+    }
+
     /* NOSOTROS TABLET */
     .empresa-container {
-        height: 950px;
+        height: 830px;
     }
     .emrpesa {
         gap: 90px;
+    }
+    .empresa-images {
+        height: 380px;
     }
     .empresa-banner {
         height: 300px;
@@ -921,12 +1151,12 @@ PARA 3ER ENTREGA:
         font-size: 16px;
     }
     .etapas-titulo h2 {
-        font-size: 30px;
-        font-weight: 600;
+        font-size: 28px;
+        font-weight: 700;
     }
     .servicios-container {
-        /* height: 600px; */
-        margin-bottom: 0;
+        height: 530px;
+        /* margin-bottom: 0; */
     }
     .servicios-box {
         flex-direction: row;
@@ -948,13 +1178,18 @@ PARA 3ER ENTREGA:
         width: 50%;
     }
 
-
     /* PROYECTOS TABLET */
     .proyectos-container {
         height: 900px;
     }
+    .proyectos-encabezado {
+        height: 150px;
+    }
     .proyectos-encabezado h2 {
-        font-size: 22px;
+        font-size: 20px;
+    }
+    .proyectos-encabezado p {
+        width: 80%;
     }
     .proyectos-grid {
         width: 75%;
@@ -974,17 +1209,22 @@ PARA 3ER ENTREGA:
         font-size: 16px;
     }
 
-
     /* DISEÑOS TABLET */
 
 
     /* CONTACTO TABLET */
     .contacto-container {
-        height: 650px;
+        height: 1100px;
     }
     .contacto {
-        flex-direction: row;
         gap: 50px;
+    }
+    .contacto-hr {
+        width: 70px;
+        height: 2px;
+        display: block;
+        background-color: black;
+        opacity: 100%;
     }
     .datos-container {
         display: flex;
@@ -1012,7 +1252,6 @@ PARA 3ER ENTREGA:
     .contacto form div textarea {
         height: 175px;
     }
-
 
     /* FOOTER TABLET */
     .footer-container {
@@ -1070,6 +1309,75 @@ PARA 3ER ENTREGA:
 
 
 @media (min-width: 992px) {
+    /* HEADER DESKTOP */
+    .banner {
+        height: 75vh;
+    }
+    .banner-txt {
+        height: 75vh;
+    }
+    .banner-txt div {
+        width: 35%;
+    }
+    .banner-txt h1 {
+        font-size: 24px;
+    }
+
+    /* NAVBAR DESKTOP */
+    .nav-item hr,
+    .dropdown-toggle,
+    .usuario,
+    .icono-usuario,
+    .fa-house {
+        display: none;
+    }
+    .offcanvas-ul {
+        align-items: center;
+    }
+    .nav-link {
+        /* color: rgb(197, 197, 197); */
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        padding: 0 30px;
+    }
+    .nav-link:hover {
+        /* color: white; */
+        color: rgb(197, 197, 197);
+    }
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background-color: rgb(197, 197, 197);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before {
+        width: 75%;
+        visibility: visible;
+    }
+    .icono-usuario2,
+    .fa-circle-user {
+        color: white;
+        text-decoration: none;
+    }   
+    .user-icon-container{
+        display: block;
+    }
+    .icono-usuario2 {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .dropdown-menu {
+        border: 1px solid rgb(197, 197, 197);
+    }
 
     /* INDEX DESKTOP - Flta convertilo en responsive */
     .nosotros-container {
@@ -1131,8 +1439,7 @@ PARA 3ER ENTREGA:
         border-radius: 4px;
         padding: 6px;
     }
-    
-    
+
     .datos-random-container {
         width: 100%;
         height: 200px;
@@ -1164,8 +1471,7 @@ PARA 3ER ENTREGA:
     .datos-random article p {
         font-size: 24px;
     }
-    
-    
+
     .secciones-container {
         width: 100%;
         height: 650px;
@@ -1207,7 +1513,7 @@ PARA 3ER ENTREGA:
     .secciones-card3 {
         background-image: url("../images/proyecto8.jpg");
     }
-    .secciones-card1, .secciones-card2, 
+    .secciones-card1, .secciones-card2,
     .secciones-card3 {
         /* background-image: url("../images/proyecto2.jpg"); */
         background-repeat: no-repeat;
@@ -1245,8 +1551,7 @@ PARA 3ER ENTREGA:
         display: none;
         /* Hacer que el texto solo aparezca al posar el cursor sobre la imagen */
     }
-    
-    
+
     .newsletter-container {
         width: 100%;
         height: 450px;
@@ -1294,55 +1599,9 @@ PARA 3ER ENTREGA:
         font-weight: 600;
     }
 
-
-    /* HEADER NAVBAR - DESKTOP */
-    .nav-item hr {
-        display: none;
-    }
-    .usuario{
-        display: none;
-    }
-    .icono-usuario {
-        display: block !important;
-        color:rgb(197, 197, 197);
-    }
-    .offcanvas-ul {
-        align-items: center;
-    }
-    .nav-link {
-        color:rgb(197, 197, 197);
-    }
-    .nav-link:hover {
-        color: white;
-        font-weight: 600;
-        scale: 1.1;
-    }
-    .icono-usuario:hover {
-        color: white;
-        font-weight: 700;
-        text-decoration: none;
-    }
-    /* .nav-width {
-    width: 100%;
-    margin: 0 auto;
-    } */
-    /* .container-fluid {
-    width: 80%;
-    } */
-
-    /* 
-
-    PARA 3ER ENTREGA:
-    - Modificar efecto de la flecha despues de clickearla. Que se mantenga blanca en vez de negro
-    - Intentar ubicar link en el centro pero dejar el icono de login en el margen derecho
-    - Darle borde al dropdown
-
-    */
-
-
     /* NOSOTROS DESKTOP */
     .empresa-container {
-        height: 600px;
+        height: 550px;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -1351,22 +1610,24 @@ PARA 3ER ENTREGA:
         flex-direction: row;
     }
     .empresa-texto {
-        width: 45%;
+        width: 40%;
     }
     .empresa-images {
-        width: 50%;
+        width: 60%;
+        display: flex;
+        align-items: center;
         position: relative;
         transition: 0.5s;
     }
     .empresa-images img {
         height: 350px;
-        border-radius: 20px;
+        border-radius: 15px;
         transition: 0.7s;
     }
     .empresa-images .empresa-img2 {
         display: block;
         position: absolute;
-        top: 0;
+        top: 15px;
         left: 0;
         opacity: 0;
         transition: 0.5s;
@@ -1397,14 +1658,20 @@ PARA 3ER ENTREGA:
     .etapa-card-texto{
         width: 80%;
     }
-
+    .servicios-container {
+        height: 500px;
+        /* margin-bottom: 0; */
+    }
 
     /* PROYECTOS DESKTOP */
     .proyectos-container {
-        height: 1200px;
+        height: 1220px;
     }
     .proyectos-encabezado h2 {
-        font-size: 22px;
+        font-size: 24px;
+    }
+    .proyectos-encabezado p {
+        width: 60%;
     }
     .proyectos-grid {
         width: 70%;
@@ -1424,75 +1691,19 @@ PARA 3ER ENTREGA:
         font-size: 16px;
     }
 
-
     /* DISEÑOS DESKTOP - Falta convertilo en responsive */
-    .modelos-banner {
-        width: 100%;
-        display: flex;
-    }
-    .modelos-banner img {
-        width: 60%;
-        margin: 0 auto;
-    }
-    .modelos-encabezado {
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
-        margin: 150px auto 0;
-        padding-bottom: 20px;
-        border-bottom: 1px solid black;
-    }
-    .modelos-filtro {
-        display: flex;
-        align-items: center;
-    }
-    .modelos-filtro span {
-        padding: 0 20px;
-    }
-    .modelos-container {
-        margin: 0px auto 150px;
-    }
-    .modelos-container article {
-        width: 80%;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-between; */
-        margin: 0 auto;
-    }
-    .modelos-container article h2 {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 60px 0px 30px;
-    }
-    .modelos-container article span,
-    .modelos div span {
-        font-weight: 300;
-    }
-    .modelos {
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
-    }
-    /* .modelos div:not(:last-child){
-        margin-right: 5px;
-    } */
-    .modelos div p {
-        font-weight: 500;
-        margin: 10px 0px 5px
-    }
-    .modelos img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
+
+
+    
 
     /* CONTACTO DESKTOP */
     .contacto-container {
-        height: 800px;
+        height: 750px;
         max-width: 1200px;
         margin: 0 auto;
     }
     .datos-container {
+        width: 50%;
         position: relative;
     }
     .datos-titulo h2 {
@@ -1523,7 +1734,14 @@ PARA 3ER ENTREGA:
     .datos-titulo-secundario h2 {
         font-size: 20px;
     }
+    .contacto-hr {
+        display: none;
+    }
+    .contacto {
+        flex-direction: row;
+    }
     .contacto form {
+        width: 50%;
         margin-top: 0;
     }
     .contacto form div input,
@@ -1547,10 +1765,12 @@ PARA 3ER ENTREGA:
     .mapa {
         height: 350px;
     }
-    .contacto-txt h2 {
-        font-size: 24px;
+    .contacto-txt div h2 {
+        font-size: 22px;
     }
-
+    .contacto-txt div a {
+        padding: 8px 15px;
+    }
 
     /* FOOTER DESKTOP */
     .footer-container {

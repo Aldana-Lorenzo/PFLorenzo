@@ -14,14 +14,12 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-color fixed-top">
-            <div class="container-fluid header-width">
-                <!-- <a class="navbar-brand" href="#">Offcanvas navbar</a> -->
-                <a class="navbar-brand text-decoration-none" href="../../index.html">
-                    <img class="header-logo" src="../../public/images/logo.png" alt="logo" />
-                </a>
+            <div class="container   justify-content-between">
+                <a class="navbar-brand" href="../../index.html"><img class="header-logo"
+                        src="../../public/images/logo.png" alt="logo" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icono"><i class="fa-solid fa-bars"></i></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -32,56 +30,71 @@
                     </div>
 
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav offcanvas-ul justify-content-end flex-grow-1 pe-3">
-                            <li>
-                                <a class="nav-link px-2" href="../../index.html">Inicio</a>
-                            </li>
-                            <li>
-                                <a class="nav-link px-2" href="nosotros.html">Nosotros</a>
-                            </li>
-                            <li>
-                                <a class="nav-link px-2" href="proyectos.html">Proyectos</a>
-                            </li>
-                            <li>
-                                <a class="nav-link px-2" href="disenos.html">Diseños</a>
-                            </li>
-                            <li>
-                                <a class="nav-link px-2" href="contacto.html">Contacto</a>
-                            </li>
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li><a class="nav-link px-2 d-flex justify-content-between" href="../../index.html">Inicio
+                                    <i class="fa-solid fa-house"></i></a></li>
+                            <li><a class="nav-link px-2" href="nosotros.html">Nosotros</a></li>
+                            <li><a class="nav-link px-2" href="proyectos.html">Proyectos</a></li>
+                            <li><a class="nav-link px-2" href="disenos.html">Diseños</a></li>
+                            <li><a class="nav-link px-2" href="contacto.html">Contacto</a></li>
 
                             <li class="nav-item dropdown">
                                 <hr>
-                                <a class="nav-link dropdown-toggle px-2 menu-hamburguesa" href="#" role="button"
+                                <a class="nav-link px-2 dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="usuario">Usuario</span>
                                     <i class="fa-solid fa-circle-user icono-usuario"></i>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="#">Login</a>
-                                    </li>
-                                    <!-- 
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li> 
-                                    -->
-                                    <li>
-                                        <a class="dropdown-item" href="#">Sing-up</a>
-                                    </li>
+                                    <li><a class="dropdown-item" href="#">Login</a></li>
+                                    <li><a class="dropdown-item" href="#">Sing-in</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
+
+                <div class="user-icon-container">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="px-2 dropdown-toggle icono-usuario2" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-circle-user"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Login</a></li>
+                                <li><a class="dropdown-item" href="#">Sing-in</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </nav>
     </header>
 
     <main>
-        <div class="banner-nosotros">
-            <div>
-                <h1>NOSOTROS</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, dicta.</p>
+        <div class="boton-flotante">
+            <input type="checkbox" id="btn-mas">
+            <div class="btn-redes">
+                <a href="http://wa.me/+549112222222"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="btn-mas">
+                <label for="btn-mas"><i class="fa-solid fa-plus"></i></label>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="banner-img">
+                <img src="../../public/images/banner-nosotros.jpg" alt="">
+            </div>
+            <div class="banner-txt">
+                <div>
+                    <h1>NOSOTROS</h1>
+                    <p>En cada proyecto buscamos superar las expectativas de nuestros clientes, a partir de habilidades técnicas y creativas.</p>
+                </div>
             </div>
         </div>
 
@@ -92,15 +105,9 @@
                         <h2>¿POR QUÉ ELEGIRNOS?</h2>
                         <hr>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vel aperiam
-                        voluptate ipsa incidunt dignissimos, sapiente corrupti porro repellat nesciunt consectetur,
-                        dolor
-                        eligendi reprehenderit sunt?
+                    <p>En nuestra empresa nos dedicamos a convertir sueños en realidad. Con una trayectoria sólida y un enfoque centrado en la excelencia, nos destacamos por nuestra pasión por el diseño, la calidad y la atención al detalle.
                     </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, quasi similique beatae
-                        expedita vitae voluptas. Cum consequuntur fuga iure expedita, debitis, non autem molestiae
-                        maxime recusandae tempora, voluptate quas beatae animi veritatis iusto nisi. Nostrum dolores aut
-                        pariatur id inventore.</p>
+                    <p>Nos esforzamos por construir relaciones sólidas con nuestros clientes, basadas en la transparencia, la comunicación abierta y el respeto mutuo. Cada proyecto es una colaboración, donde escuchamos atentamente sus necesidades y deseos, trabajando juntos para lograr un resultado excepcional.</p>
                 </div>
 
                 <div class="empresa-images">
@@ -139,9 +146,7 @@
                             <span>Planificación</span>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            delectus recusandae quia illo eligendi consectetur est cumque,
-                            illum numquam dolorum.
+                            En la fase inicial de planificación y diseño, exploramos ideas creativas, evaluamos factores técnicos y elaboramos planos detallados para garantizar el éxito del proyecto.
                         </p>
                     </div>
                 </div>
@@ -163,9 +168,7 @@
                             <span>Desarrollo</span>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            delectus recusandae quia illo eligendi consectetur est cumque,
-                            illum numquam dolorum.
+                           Supervisamos cada paso para garantizar la calidad, la seguridad y el cumplimiento de los plazos, manteniendo una comunicación constante con nuestros clientes.
                         </p>
                     </div>
                 </div>
@@ -187,9 +190,7 @@
                             <span>Final de obra</span>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                            delectus recusandae quia illo eligendi consectetur est cumque,
-                            illum numquam dolorum.
+                            Realizamos inspecciones exhaustivas para garantizar que todo se cumpla, y entregamos el proyecto final a nuestro cliente, garantizando su satisfacción y cumpliendo sus expectativas.
                         </p>
                     </div>
                 </div>
@@ -201,7 +202,8 @@
             <div class="servicios-box">
                 <div class="servicios-titulo">
                     <h2>Nuestros servicios</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ratione!</p>
+                    <p>Ofrecemos desde diseño inicial hasta gestión integral de obras para proyectos residenciales y comerciales.
+                    </p>
                     <hr>
                 </div>
 
@@ -210,15 +212,12 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <strong>Servicio #1</strong>
+                                <strong>Diseño</strong>
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo vero at esse tempore
-                                    fugiat ipsam voluptatem est sapiente maxime dolorum provident dolore ratione fuga
-                                    ducimus, enim saepe et. Quaerat, soluta.</p>
+                                <p>Transformamos sus ideas en diseños innovadores y funcionales, fusionando estética y practicidad para crear espacios que reflejen su estilo y satisfagan sus necesidades.</p>
                             </div>
                         </div>
                     </div>
@@ -226,14 +225,12 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed focus-bt" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <strong>Servicio #2</strong>
+                                <strong>Documentacion</strong>
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo vero at esse tempore
-                                    fugiat ipsam voluptatem est sapiente maxime dolorum provident dolore ratione fuga
-                                    ducimus, enim saepe et. Quaerat, soluta.</p>
+                                <p>Nos encargamos de gestionar todos los trámites municipales necesarios para su proyecto, garantizando el cumplimiento de regulaciones y normativas locales de manera eficiente. </p>
                             </div>
                         </div>
                     </div>
@@ -241,14 +238,12 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <strong>Servicio #3</strong>
+                                <strong>Proyecto y dirección</strong>
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo vero at esse tempore
-                                    fugiat ipsam voluptatem est sapiente maxime dolorum provident dolore ratione fuga
-                                    ducimus, enim saepe et. Quaerat, soluta.</p>
+                                <p>Diseñamos proyectos personalizados que reflejen su visión única, combinando funcionalidad y estética, y supervisamos también, cada etapa de la construcción con un enfoque meticuloso en calidad, seguridad y cumplimiento de plazos, garantizando la ejecución exitosa de su proyecto.</p>
                             </div>
                         </div>
                     </div>
@@ -256,14 +251,12 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <strong>Servicio #4</strong>
+                                <strong>Planos y mensura</strong>
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo vero at esse tempore
-                                    fugiat ipsam voluptatem est sapiente maxime dolorum provident dolore ratione fuga
-                                    ducimus, enim saepe et. Quaerat, soluta.</p>
+                                <p>Realizamos mediciones del terreno para establecer límites y dimensiones exactas, asegurando una base sólida y precisa para el desarrollo del proyecto. Lo cual nos permite elaborar planos detallados que sirven como guía para la construcción, asegurando una ejecución eficiente y precisa de la obra.</p>
                             </div>
                         </div>
                     </div>
@@ -271,14 +264,12 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <strong>Servicio #5</strong>
+                                <strong>Desarrollo</strong>
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo vero at esse tempore
-                                    fugiat ipsam voluptatem est sapiente maxime dolorum provident dolore ratione fuga
-                                    ducimus, enim saepe et. Quaerat, soluta.</p>
+                                <p>Transformamos ideas en realidad con desarrollos que optimizan el uso del espacio y la inversión, desde viviendas residenciales hasta complejos comerciales, adaptados a sus necesidades.</p>
                             </div>
                         </div>
                     </div>
@@ -286,14 +277,25 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                <strong>Servicio #6</strong>
+                                <strong>Administración de obra</strong>
                             </button>
                         </h2>
                         <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo vero at esse tempore
-                                    fugiat ipsam voluptatem est sapiente maxime dolorum provident dolore ratione fuga
-                                    ducimus, enim saepe et. Quaerat, soluta.</p>
+                                <p>Gestionamos eficientemente los recursos y la logística para optimizar costos y tiempos, asegurando la eficacia en la ejecución y el control presupuestario.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item accordion-css">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <strong>Dirección ejecutiva</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Guiamos su proyecto desde la concepción hasta la finalización, brindando liderazgo estratégico y toma de decisiones para garantizar resultados sobresalientes y la plena satisfacción del cliente.</p>
                             </div>
                         </div>
                     </div>
@@ -387,6 +389,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    
+    <script>
+        const navEl = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 70) {
+                navEl.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 70) {
+                navEl.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+
 </body>
 
 </html>
