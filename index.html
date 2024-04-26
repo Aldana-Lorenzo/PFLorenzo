@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estudio Arq - INICIO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/styles.css">
     <script src="https://kit.fontawesome.com/12c225f38a.js" crossorigin="anonymous"></script>
 </head>
@@ -14,8 +15,8 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-color fixed-top">
             <div class="container justify-content-between">
-                <a class="navbar-brand" href="index.html"><img class="header-logo"
-                        src="public/images/logo.png" alt="logo" /></a>
+                <a class="navbar-brand" href="index.html"><img class="header-logo" src="public/images/logo.png"
+                        alt="logo" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,7 +32,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li><a class="nav-link px-2 d-flex justify-content-between" href="index.html">Inicio
-                                    <i class="fa-solid fa-house"></i></a></li>
+                                    <i class="fa-solid fa-house d-lg-none"></i></a></li>
                             <li><a class="nav-link px-2" href="src/pages/nosotros.html">Nosotros</a></li>
                             <li><a class="nav-link px-2" href="src/pages/proyectos.html">Proyectos</a></li>
                             <li><a class="nav-link px-2" href="src/pages/disenos.html">Diseños</a></li>
@@ -85,47 +86,50 @@
             </div>
         </div>
 
-        <section>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="public/images/carrusel1.jpg" class="d-block w-100" alt="Calida propiedad de estilo minimalista con fachada de madera y piedra">
+                    <div class="carousel-caption d-flex flex-column justify-content-start align-middle">
+                        <h2>First slide label</h2>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="public/images/nosotros1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                
+                <div class="carousel-item">
+                    <img src="public/images/carrusel2.jpg" class="d-block w-100" alt="Moderna casa en dos plantas con amplia piscina">
+                    <div class="carousel-caption d-flex flex-column justify-content-start align-middle">
+                        <h2>Second slide label</h2>
+                        <p>Some representative placeholder content for the second slide.</p>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="public/images/nosotros4.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="public/images/nosotros5.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </section>
-
+                <div class="carousel-item">
+                    <img src="public/images/carrusel3.jpg" class="d-block w-100" alt="Diseño de alta categoría con amplios ventanales, detalles interiores en madera y fogata exterior rodeada de comodos sillones">
+                    <div class="carousel-caption d-flex flex-column justify-content-start align-middle">
+                        <h2>Third slide label</h2>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
         <section class="nosotros-container">
             <div class="nosotros-index">
@@ -136,20 +140,19 @@
                 <div class="nosotros-index-texto">
                     <div class="nosotros-index-info">
                         <div>
-                            <h1>NUESTRA EMPRESA</h1>
+                            <h1>SOBRE NOSOTROS</h1>
                             <hr>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nostrum iure animi doloremque
-                            consectetur, ipsa nobis tempore veniam explicabo eaque, omnis dignissimos fugiat quas quasi!
+                        <p>
+                            Somos una empresa de construcción y arquitectura dedicada a la excelencia y la creatividad.
                         </p>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum accusantium aliquid omnis
-                            repellendus modi repellat, et quaerat! Sapiente, eaque corrupti. Ratione soluta voluptatum
-                            labore accusamus!
+                            Con más de 40 años en el sector, nuestra pasión se refleja en cada proyecto, ofreciendo
+                            soluciones innovadoras y espacios que inspiran.
                         </p>
                     </div>
-                    <div>
-                        <a href="src/pages/nosotros.html">VER MÁS</a>
+                    <div class="button-index">
+                        <a href="src/pages/nosotros.html">Más Info</a>
                     </div>
                 </div>
             </div>
@@ -161,10 +164,12 @@
                     <h2>7</h2>
                     <p>Obras en construcción</p>
                 </article>
-                <article>
+                <hr>
+                <article class="datos-padding">
                     <h2>54</h2>
                     <p>Proyectos finalizados</p>
                 </article>
+                <hr>
                 <article>
                     <h2>110</h2>
                     <p>Clientes satisfechos</p>
@@ -179,58 +184,49 @@
                         <br>
                         NUESTRO TRABAJO
                     </h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laboriosam vero odit laudantium.
-                        Ea,
-                        porro!</p>
+                    <p>Te invitamos a explorar y descubrir nuestros proyectos más recientes. ¡Hacemos realidad tu sueño, dándole vida y diseño a tus ideas!
+                    </p>
                 </div>
 
-                <a class="secciones-card1" href="src/pages/proyectos.html">
-                    <!-- <article> -->
-                    <div class="secciones-titulo">
-                        <h2>PROYECTOS</h2>
-                        <div>
+                <a class="secciones-card card1" href="src/pages/proyectos.html">
+                    <div class="card-info">
+                        <div class="card-titulo">
+                            <h2>PROYECTOS</h2>
                             <hr>
+                            <p>Conocé más sobre nuestras obras ya finalizadas
+                            </p>
+                        </div>
+                        <div class="card-txt">
+                            <span>01</span>
                         </div>
                     </div>
-                    <div class="secciones-texto">
-                        <p>
-                            Conocé más sobre nuestras obras ya finalizadas
-                        </p>
-                        <span>01</span>
-                    </div>
-                    <!-- </article> -->
                 </a>
 
-                <a class="secciones-card2" href="src/pages/disenos.html">
-                    <!-- <article> -->
-                    <div class="secciones-titulo">
-                        <h2>DISEÑOS</h2>
-                        <div>
+                <a class="secciones-card card2" href="src/pages/disenos.html">
+                    <div class="card-info">
+                        <div class="card-titulo">
+                            <h2>DISEÑO</h2>
                             <hr>
+                            <p>Elegí el diseño que más se ajuste a tus necesidades
+                            </p>
+                        </div>
+                        <div class="card-txt">
+                            <span>02</span>
                         </div>
                     </div>
-                    <div class="secciones-texto">
-                        <p>
-                            Elegí el diseño que más se ajuste a tus necesidades
-                        </p>
-                        <span>02</span>
-                    </div>
-                    <!-- </article> -->
                 </a>
 
-                <a class="secciones-card3" href="src/pages/contacto.html">
-                    <!-- <article> -->
-                    <div class="secciones-titulo">
-                        <h2>PRESUPUESTO</h2>
-                        <div>
+                <a class="secciones-card card3" href="src/pages/contacto.html">
+                    <div class="card-info">
+                        <div class="card-titulo">
+                            <h2>CONTACTO</h2>
                             <hr>
+                            <p>Solicitá tu presupuesto</p>
+                        </div>
+                        <div class="card-txt">
+                            <span>03</span>
                         </div>
                     </div>
-                    <div class="secciones-texto">
-                        <p>Solicitá tu presupuesto</p>
-                        <span>03</span>
-                    </div>
-                    <!-- </article> -->
                 </a>
             </div>
         </section>
@@ -239,22 +235,20 @@
             <div class="newsletter">
                 <div>
                     <h2>NEWSLETTER</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                        obcaecati delectus laudantium similique praesentium rerum illo exercitationem alias eligendi
-                        nesciunt!
+                    <p>Subscribite y no te pierdas nuestras novedades. ¡Conocé nuestros últimos proyectos!
                     </p>
                 </div>
                 <form>
                     <input class="news-name" type="text" name="name" id="name" placeholder="Nombre*">
                     <input class="news-email" type="mail" name="mail" id="mail" placeholder="E-mail*">
-                    <button type="submit">SUSCRIBIRME</button>
+                    <button type="submit">Suscribirme</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <!--FUTURO PARTIAL-->
+        <!-- FUTURO PARTIAL -->
         <section class="footer-container">
             <div class="footer">
                 <div class="footer-logo">
@@ -266,8 +260,8 @@
                 <hr>
                 <article>
                     <nav>
-                        <h2>SECCIONES</h2>
-                        <ul>
+                        <h2>Secciones</h2>
+                        <ul class="footer-ul">
                             <li><a href="index.html">Inicio</a></li>
                             <li><a href="src/pages/nosotros.html">Nosotros</a></li>
                             <li><a href="src/pages/proyectos.html">Proyectos</a></li>
@@ -277,7 +271,7 @@
                     </nav>
 
                     <div class="footer-contacto">
-                        <h2>CONTACTO</h2>
+                        <h2>Contacto</h2>
                         <div class="footer-datos-box">
                             <div class="footer-datos">
                                 <div>
@@ -308,9 +302,8 @@
                 </article>
                 <hr>
 
-
                 <div class="footer-newsletter">
-                    <h2>NEWSLETTER</h2>
+                    <h2>Newsletter</h2>
                     <form class="mail-newsletter">
                         <input type="email" name="mail" id="email" placeholder="Ingresa tu e-mail">
                         <div class="iconos-redes">
@@ -327,10 +320,16 @@
                     </form>
                 </div>
             </div>
+
+            <div class="copyright">
+                <p>© 2024 Company, Inc. All rights reserved.</p>
+            </div>
         </section>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <script>
         const navEl = document.querySelector('.navbar');
