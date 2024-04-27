@@ -46,7 +46,7 @@ ul {
 }
 .header-logo {
     width: 85px;
-    height: 28px;
+    height: 30px;
 }
 .navbar-toggler {
     border: none;
@@ -96,7 +96,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
     position: absolute;
     top: 0;
     left: 0;
@@ -193,6 +193,7 @@ ul {
     position: absolute;
     bottom: 70px;
 }
+.carousel-caption h1, 
 .carousel-caption h2 {
     color: white;
     font-size: 18px;
@@ -246,7 +247,7 @@ ul {
     align-items: center;
     gap: 5px;
 }
-.nosotros-index-info h1 {
+.nosotros-index-info h2 {
     font-size: 18px;
     font-weight: 800;
 }
@@ -1322,8 +1323,10 @@ ul {
     justify-content: center;
     gap: 15px;
 }
-.iconos-redes a {
+.redes-icono {
     width: 30px;
+    text-decoration: none;
+    color: white;
 }
 .iconos-redes i {
     font-size: 20px;
@@ -1746,6 +1749,9 @@ ul {
     .nav-link:hover::before {
         width: 75%;
         visibility: visible;
+    }
+    .nav-link:focus {
+        color: white;
     }
     .icono-usuario2,
     .fa-circle-user {
