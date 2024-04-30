@@ -1,0 +1,214 @@
+.banner-contacto {
+    @include flex(column, center, center, 0);
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/banner-contacto.jpg");
+    /* object-fit: cover; */
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contacto-container {
+    @include flex(unset, center, center, 0);
+    width: 100%;
+    height: 600px;
+
+    .contacto {
+        @include flex(column, center, flex-start, 50px);
+        width: 80%;
+
+        .datos-container {
+            display: none;
+
+            .datos-titulo {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+
+                h2 {
+                    font-size: 22px;
+                    font-weight: 800;
+                }
+            }
+
+            .datos-box {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+
+                .datos {
+                    @include flex(unset, flex-start, center, 15px);
+                    
+                    .datos-icono {
+                        width: 33px;
+                        height: 33px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid rgb(34, 34, 34);
+                        border-radius: 100%;
+
+                        i {
+                            text-align: center;
+                            color: rgb(34, 34, 34);
+                            display: flex;
+                            align-items: flex-start;
+                        }
+                    }
+
+                    .datos-texto {
+                        display: flex;
+                        flex-direction: column;
+
+                        h2 {
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                    }
+
+                }
+            }
+
+            .datos-titulo-secundario {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                h2 {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .contacto-hr {
+            display: none;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            gap: 20px;
+
+            h1 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-left: 5px;
+            }
+
+            div {
+                @include flex(unset, space-between, center, 15px);
+                
+                input {
+                    width: 45%;
+                }
+
+                textarea {
+                    width: 100%;
+                }
+
+                input,
+                textarea {
+                    padding: 10px 5px;
+                    border: none;
+                    border-bottom: 0.5px #a5a5a577 solid;
+                    outline: none;
+                }
+            }
+
+            div {
+
+                p {
+                    width: 100%;
+                    display: none;
+                }
+
+                button {
+                    @include flex(unset, center, center, 0);
+                    width: 100%;
+                    height: 40px;
+                    padding: 5px 10px;
+                    border-radius: 7px;
+                    border: none;
+                    color: #ffffff;
+                    margin-top: 10px;
+
+                    &:hover {
+                        background-color: rgb(59, 63, 67);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mapa-container {
+    @include flex(unset, space-between, center, 0);
+    width: 100%;
+
+    .mapa {
+        @include flex(unset, space-between, center, 25px);
+        width: 100%;
+        height: 300px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            filter: hue-rotate(325deg);
+        }
+    }
+}
+
+.contacto-txt-container {
+    @include flex(column, center, center, 0);
+    width: 90%;
+    height: 350px;
+    text-align: center;
+    margin: 0 auto;
+
+    .contacto-txt-box,
+    .contacto-txt div {
+        @include flex(column, center, center, 20px);
+        text-align: center;
+    }
+
+    .contacto-txt-box {
+        gap: 35px;
+
+        hr {
+            height: 0.5px;
+            width: 60px;
+            color: #000;
+        }
+
+        .contacto-txt {
+            @include flex(column, unset, center, 20px);
+
+            h2 {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            p {
+                width: 60%;
+            }
+
+            a {
+                text-decoration: none;
+                color: #212529;
+                font-weight: 600;
+                border: 2px solid #212529;
+                padding: 8px;
+                transition: 0.5s;
+
+                &:hover {
+                    background-color: #212529;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

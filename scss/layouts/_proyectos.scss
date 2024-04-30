@@ -1,0 +1,147 @@
+.proyectos-encabezado {
+    @include flex(column, flex-end, center, 0);
+    width: 100%;
+    height: 160px;
+    margin: 15px 0;
+
+    div {
+        @include flex(column, center, center, 8px);
+        width: 75%;
+        text-align: center;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        hr {
+            width: 50px;
+            margin-top: 10px;
+        }
+    }
+
+}
+
+.proyectos-container {
+    @include flex(column, center, center, 50px);
+    width: 100%;
+    height: 1450px;
+
+    .proyectos-grid {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+        grid-template-areas:
+            "img1 img2"
+            "img3 img3"
+            "img3 img3"
+            "img4 img5"
+            "img6 img6"
+            "img6 img6"
+            "img7 img8";
+        grid-gap: 5px;
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+        .img4 {
+            grid-area: img4;
+        }
+
+        .img5 {
+            grid-area: img5;
+        }
+
+        .img6 {
+            grid-area: img6;
+        }
+
+        .img7 {
+            grid-area: img7;
+        }
+
+        .img8 {
+            grid-area: img8;
+        }
+
+        .proyecto-card {
+            position: relative;
+            overflow: hidden;
+
+            a {
+                text-decoration: none;
+
+                img {
+                    @include img(100%, 100%, cover, center);
+                    transition: 0.5s;
+                }
+
+                .proyecto-card-datos {
+                    @include flex(column, center, center, 5px);
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.60);
+                    color: #ffffff;
+                    position: absolute;
+                    bottom: 0;
+                    opacity: 0;
+                    transition: 0.8s;
+
+                    h2 {
+                        color: #ffffff;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        color: #ffffff;
+                    }
+
+                    button {
+                        @include flex(unset, center, center, 0);
+                        width: 70px;
+                        height: 25px;
+                        font-size: 12px;
+                        background: transparent;
+                        color: #ffffff;
+                        border: 1px solid #ffffff;
+                        border-radius: 15px;
+
+                        &:hover {
+                            background: #212529;
+                            color: #ffffff;
+                            border: 1px solid #212529;
+                        }
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .mas-proyectos {
+        @include flex(column, center, center, 10px);
+    
+        span {
+            font-weight: 600;
+        }
+    }
+}

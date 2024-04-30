@@ -1,0 +1,68 @@
+.navbar {
+    width: 100vw;
+    margin: 0;
+    transition: 0.5s;
+    --bs-navbar-brand-padding-y: 1rem;
+
+    .container {
+        width: 80%;
+
+        .header-logo {
+            width: 85px;
+            height: 30px;
+        }
+
+        .navbar-toggler {
+            border: none;
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            .navbar-toggler-icon {
+                background-image: url("../images/menu-hamburguesa.png")
+            }
+        }
+
+        .nav-item {
+            hr {
+                margin: 1rem 0.4rem;
+            }
+        }
+
+        .icono-usuario {
+            display: none !important;
+        }
+
+        .dropdown-menu {
+            border: none;
+
+            .dropdown-item {
+                &:focus {
+                    background-color: #F7F8F9;
+                    color: rgb(33, 37, 41);;
+                }
+            }
+        }
+
+        .user-icon-container {
+            display: none;
+        }
+
+        .btn-close:focus,
+        .dropdown-toggle:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+}
+
+.bg-color {
+    background-color: transparent;
+}
+
+.navbar-scrolled {
+    background-color: rgb(33, 37, 41);
+}

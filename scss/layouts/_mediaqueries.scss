@@ -1,0 +1,777 @@
+@media (min-width: 768px) {
+    /* HEADER TABLET */
+    .banner {
+        height: 50vh;
+
+        .banner-txt {
+            height: 50vh;
+
+            div {
+                width: 55%;
+
+                h1 {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    /* INDEX TABLET */
+    .nosotros-container {
+        height: 550px;
+
+        .nosotros-index {
+            flex-direction: row;
+            max-width: 1000px;
+            height: 300px;
+            gap: 45px;
+
+            .nosotros-index-imagen {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0;
+                }
+            }
+
+            .nosotros-index-texto {
+                align-items: flex-end;
+                gap: 15px;
+
+                .nosotros-index-info {
+                    text-align: justify;
+                    gap: 15px;
+
+                    div {
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+
+    .datos-random-container {
+        height: 200px;
+
+        .datos-random {
+            width: 620px;
+            flex-direction: row;
+            gap: 0px;
+
+            article {
+                flex-direction: row;
+            }
+
+            .datos-padding {
+                padding: 0 10px;
+            }
+
+            hr {
+                width: 70px;
+                rotate: 90deg;
+            }
+        }
+    }
+
+    .secciones-container {
+        height: 650px;
+
+        .secciones {
+            flex-direction: row;
+
+            .secciones-descripcion {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 0;
+
+                h2 {
+                    width: 65%;
+                }
+
+                p {
+                    width: 65%;
+                }
+            }
+
+            .card1,
+            .card2,
+            .card3 {
+                height: 500px;
+
+                .card-info {
+                    position: relative;
+                    flex-direction: column-reverse;
+                    /* Se vincula con el flex-direction del card-info mobile */
+
+                    .card-titulo {
+                        @include flex(row, flex-start, center, 15px);
+                        width: 300px;
+                        height: 50px;
+                        margin: 0;
+                        rotate: 90deg;
+                        position: absolute;
+                        top: 125px;
+                        right: -145px;
+
+                        hr {
+                            display: block;
+                            background-color: white;
+                            color: white;
+                            opacity: 100%;
+                            width: 100px;
+                            margin-top: 0;
+                        }
+
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .newsletter-container {
+        height: 250px;
+
+        .newsletter {
+            width: 70%;
+
+            div {
+                align-items: center;
+
+                p {
+                    width: 70%;
+                }
+            }
+
+            form {
+                flex-direction: row;
+
+                .news-name {
+                    width: 30%;
+                }
+
+                .news-email {
+                    width: 50%;
+                }
+
+                button {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    /* NOSOTROS TABLET */
+    .empresa-container {
+        height: 840px;
+
+        .empresa {
+            gap: 90px;
+            margin-top: 20px;
+
+            .empresa-images {
+                height: 380px;
+            }
+        }
+
+    }
+
+    .empresa-banner {
+        height: 300px;
+        justify-content: flex-start;
+        margin-top: 20px;
+
+        .empresa-banner-texto {
+            p {
+                line-height: 80px;
+            }
+
+            .txt1 {
+                font-size: 45px;
+            }
+
+            .txt2 {
+                font-size: 80px;
+            }
+        }
+    }
+
+    .cards-container {
+        padding: 65px 0 30px;
+
+        article {
+            width: 90%;
+            flex-direction: row;
+            gap: 0;
+
+            .card-box {
+                height: 420px;
+                gap: 30px;
+
+                .card-imagen {
+                    width: 160px;
+                    height: 160px;
+
+                    .dorso {
+                        h2 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .etapas-titulo {
+                    h2 {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    .servicios-container {
+        height: 530px;
+
+        .servicios-box {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .servicios-titulo {
+                width: 45%;
+
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {
+                    width: 60%;
+                }
+            }
+
+            .accordion {
+                width: 50%;
+            }
+        }
+    }
+
+    /* PROYECTOS TABLET */
+    .proyectos-encabezado {
+        height: 150px;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            width: 80%;
+        }
+    }
+
+    .proyectos-container {
+        height: 900px;
+
+        .proyectos-grid {
+            width: 75%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 180px;
+            grid-template-areas:
+                "img1 img1 img2"
+                "img3 img4 img4"
+                "img5 img5 img6"
+                "img7 img8 img8";
+            grid-gap: 7px;
+
+            .proyecto-card-datos {
+                gap: 7px;
+            }
+        }
+
+        .mas-proyectos {
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    /* DISEÑOS TABLET */
+
+    /* CONTACTO TABLET */
+    .contacto-container {
+        height: 1100px;
+
+        .contacto {
+            gap: 50px;
+
+            .datos-container {
+                @include flex(column, center, flex-start, 35px);
+
+                .datos-titulo {
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+
+                .datos-icono {
+                    width: 37px;
+                    height: 37px;
+                }
+
+                .datos-titulo-secundario {
+                    gap: 18px;
+                }
+            }
+
+            .contacto-hr {
+                width: 70px;
+                height: 2px;
+                display: block;
+                background-color: black;
+                opacity: 100%;
+            }
+
+            form {
+                border-top: none;
+                padding-top: 0px;
+                margin-top: 15px;
+
+                div {
+                    textarea {
+                        height: 175px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FOOTER TABLET */
+    .footer-container {
+        height: 100%;
+        padding: 40px 0;
+
+        .footer {
+            // flex-direction: column;
+            align-items: flex-start;
+
+            .footer-logo {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            hr {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            article {
+                width: 100%;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                nav {
+                    width: 30%;
+                    text-align: left;
+                }
+
+                .footer-contacto {
+                    width: 60%;
+                    align-items: flex-start;
+                    text-align: left;
+
+                    .footer-datos-box {
+                        align-items: flex-start;
+                    }
+                }
+            }
+
+            .footer-newsletter {
+                width: 100%;
+                text-align: left;
+
+                .mail-newsletter {
+
+                    .iconos-redes {
+                        flex-direction: row;
+
+                        .redes {
+                            justify-content: flex-start;
+                        }
+
+                        button {
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* HEADER DESKTOP */
+    .banner {
+        height: 75vh;
+
+        .banner-txt {
+            height: 75vh;
+
+            div {
+                width: 35%;
+
+                h1 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    /* NAVBAR DESKTOP */
+    .navbar {
+        .container {
+            .nav-link {
+                /* color: rgb(197, 197, 197); */
+                color: white;
+                font-weight: 500;
+                text-decoration: none;
+                position: relative;
+                padding: 0 30px;
+
+                &:hover {
+                    /* color: white; */
+                    color: rgb(197, 197, 197);
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 1px;
+                    background-color: rgb(197, 197, 197);
+                    visibility: hidden;
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:hover::before {
+                    width: 75%;
+                    visibility: visible;
+                }
+
+                &:focus {
+                    color: white;
+                }
+            }
+
+            .user-icon-container {
+                display: block;
+
+                .icono-usuario2,
+                .fa-circle-user {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                .icono-usuario2 {
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+                }
+
+                .dropdown-menu {
+                    border: 1px solid rgb(197, 197, 197);
+                }
+            }
+
+            .nav-item hr,
+            .dropdown-toggle,
+            .usuario,
+            .icono-usuario,
+            .fa-house {
+                display: none;
+            }
+        }
+    }
+
+    /* INDEX DESKTOP */
+    .secciones-container {
+        height: 800px;
+
+        .secciones {
+            .card1,
+            .card2,
+            .card3 {
+                height: 620px;
+            }
+        }
+    }
+
+    /* NOSOTROS DESKTOP */
+    .empresa-container {
+        height: 550px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .empresa {
+            width: 80%;
+            flex-direction: row;
+
+            .empresa-texto {
+                width: 40%;
+            }
+
+            .empresa-images {
+                width: 60%;
+                display: flex;
+                align-items: center;
+                position: relative;
+                transition: 0.5s;
+
+                img {
+                    height: 350px;
+                    border-radius: 15px;
+                    transition: 0.7s;
+                }
+
+                .empresa-img2 {
+                    display: block;
+                    position: absolute;
+                    top: 15px;
+                    left: 0;
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                &:hover .empresa-img2 {
+                    opacity: 1;
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    }
+
+    .empresa-banner-texto .txt1,
+    .empresa-banner-texto .txt2 {
+        font-size: 75px;
+    }
+
+    .cards-container {
+        height: 600px;
+
+        article {
+            width: 70%;
+            max-width: 1000px;
+            flex-direction: row;
+            gap: 40px;
+
+            .card-box {
+                height: 390px;
+            }
+        }
+
+        .etapa-card-texto {
+            width: 80%;
+
+            .etapas-titulo {
+                gap: 10px;
+            }
+        }
+    }
+
+    .servicios-container {
+        height: 500px;
+    }
+
+    /* PROYECTOS DESKTOP */
+    .proyectos-encabezado {
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            width: 60%;
+        }
+    }
+
+    .proyectos-container {
+        height: 1220px;
+
+        .proyectos-grid {
+            width: 70%;
+            /* max-width: 1200px; */
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            grid-template-areas:
+                "img1 img1 img1 img2"
+                "img3 img3 img4 img4"
+                "img3 img3 img5 img6"
+                "img7 img8 img8 img6";
+
+            .proyecto-card-datos {
+                gap: 7px;
+            }
+        }
+
+        .mas-proyectos {
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    /* DISEÑOS DESKTOP - Falta convertilo en responsive */
+
+
+
+
+    /* CONTACTO DESKTOP */
+    .contacto-container {
+        height: 750px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .contacto {
+            flex-direction: row;
+
+            .datos-container {
+                width: 50%;
+                position: relative;
+
+                .datos-titulo {
+                    h2 {
+                        font-size: 70px;
+                        position: absolute;
+                        top: -50px;
+                        left: -60px;
+                    }
+
+                    p {
+                        margin-top: 50px;
+                    }
+                }
+
+                .datos {
+                    gap: 25px;
+
+                    .datos-icono {
+                        width: 45px;
+                        height: 45px;
+
+                        i {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .datos-texto {
+                        gap: 5px;
+
+                        h2 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .datos-titulo-secundario {
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .contacto-hr {
+                display: none;
+            }
+
+            form {
+                width: 50%;
+                margin-top: 0;
+
+                input,
+                textarea {
+                    padding: 15px 10px;
+                }
+
+                h1 {
+                    font-size: 22px;
+                }
+
+                p {
+                    display: block;
+                    width: 80%;
+                    color: black;
+                    font-size: 13px;
+                    font-style: italic;
+                }
+
+                button {
+                    width: 30%;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+
+    .mapa {
+        height: 350px;
+
+        .contacto-txt {
+            h2 {
+                font-size: 22px;
+            }
+
+            a {
+                padding: 8px 15px;
+            }
+
+        }
+    }
+
+    /* FOOTER DESKTOP */
+    .footer-container {
+        height: 350px;
+
+        .footer {
+            margin-top: 30px;
+            flex-direction: row;
+
+            .footer-logo {
+                width: 20%;
+            }
+
+            hr {
+                display: none;
+            }
+
+            article {
+                width: 50%;
+                display: flex;
+                justify-content: flex-start;
+                gap: 30px;
+
+                .footer-datos-box {
+                    width: 100%;
+                }
+            }
+
+            .footer-newsletter {
+                width: 30%;
+
+                button {
+                    width: 160px;
+                }
+            }
+        }
+
+        .copyright {
+            text-align: left;
+        }
+    }
+
+}

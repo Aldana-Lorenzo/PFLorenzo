@@ -1,0 +1,258 @@
+.empresa-container {
+    width: 100%;
+    height: 910px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    .empresa {
+        @include flex(column, center, center, 70px);
+        width: 100%;
+
+        .empresa-texto {
+            @include flex(column, center, normal, 20px);
+            width: 70%;
+            text-align: justify;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-bottom: 10px;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-align: left;
+                }
+
+                hr {
+                    width: 50px;
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .empresa-images {
+            width: 100%;
+
+            img {
+                @include img(100%, 100%, cover, center);
+                filter: grayscale(100%);
+                transition: all 0.5s;
+            }
+
+            .empresa-img2 {
+                display: none;
+            }
+        }
+    }
+}
+
+.empresa-banner {
+    @include flex(column, start, center, 60px);
+    width: 100%;
+    text-align: right;
+    margin-bottom: 100px;
+
+    .banner-hr {
+        width: 100%;
+
+        hr {
+            width: 35%;
+            /* opacity: 50%; */
+        }
+    }
+
+    .empresa-banner-texto {
+        @include flex(column, center, flex-end, 0);
+        width: 85%;
+        text-align: right;
+
+        p {
+            font-weight: 900;
+            line-height: 55px;
+        }
+
+        .txt1 {
+            font-size: 32px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0.5px 0.5px 1.5px rgb(118, 118, 118), -0.5px 0.5px 1.5px rgb(118, 118, 118), 0.5px -0.5px 1.5px rgb(118, 118, 118), -0.5px -0.5px 1.5px rgb(118, 118, 118);
+        }
+
+        .txt2 {
+            font-size: 45px;
+            transition: 0.3s;
+        }
+    }
+
+    &:hover .txt2 {
+        color: rgb(243, 230, 51);
+    }
+}
+
+.cards-container {
+    @include flex(unset, center, center, 0);
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    // padding: 65px 0;
+    padding: 85px 0 0;
+
+    article {
+        @include flex(column, center, center, 0);
+        width: 80%;
+
+        .card-box {
+            @include flex(column, flex-start, center, 30px);
+            width: 350px;
+            height: 390px;
+            // justify-content: center;
+
+            .card-imagen {
+                width: 130px;
+                height: 130px;
+                position: relative;
+                transition: 0.5s;
+                transform-style: preserve-3d;
+                transform: perspective(600px) rotateY(0deg);
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .card-img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    position: absolute;
+                }
+
+                .frente {
+                    img {
+                        @include img(100%, 100%, cover, center);
+                    }
+                }
+
+                .dorso {
+                    @include flex(column, center, center, 10px);
+                    text-align: center;
+                    background-color: rgba(25, 25, 25, 0.53);
+                    position: absolute;
+                    top: 0;
+                    transform: perspective(600px) rotateY(180deg);
+                    backface-visibility: hidden;
+
+                    h2 {
+                        font-size: 14px;
+                        font-weight: 300;
+                        width: 80%;
+                        color: #ffffff;
+                    }
+
+                    hr {
+                        width: 50px;
+                        color: #ffffff;
+                        opacity: 100%;
+                    }
+                }
+
+                &:hover .frente {
+                    transform: perspective(600px) rotateY(180deg);
+                }
+
+                &:hover .dorso {
+                    transform: perspective(600px) rotateY(360deg);
+                }
+            }
+
+            .etapa-card-texto {
+                @include flex(column, center, center, 20px);
+                width: 80%;
+                text-align: center;
+
+                .etapas-titulo {
+                    display: flex;
+                    align-items: baseline;
+                    gap: 10px;
+
+                    h2 {
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 500;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.servicios-container {
+    @include flex(column, center, center, 0);
+    width: 100%;
+    height: 680px;
+    margin: 30px 0;
+
+    .servicios-box {
+        @include flex(column, center, unset, 40px);
+        width: 80%;
+        /* height: 100%; */
+
+        .servicios-titulo {
+            @include flex(column, unset, flex-start, 8px);
+            text-align: left;
+
+            h2 {
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            hr {
+                width: 50px;
+                margin-top: 15px;
+            }
+        }
+
+        .accordion {
+            --bs-accordion-active-bg: whitesmoke;
+            --bs-accordion-btn-focus-box-shadow: none;
+            --bs-accordion-btn-icon-transform: none;
+
+            .accordion-css {
+                border: none;
+
+                .accordion-button {
+                    padding: 15px 20px;
+
+                    &:hover {
+                        background-color: whitesmoke;
+                    }
+
+                    &::after {
+                        background-image: url("../images/signo-mas.png");
+                    }
+
+                    &:not(.collapsed)::after {
+                        background-image: url("../images/signo-menos.png");
+                    }
+                }
+            }
+
+            .accordion-item {
+                border-bottom: 1px solid rgb(205, 205, 205);
+            }
+        }
+    }
+}
+
+// .accordion-button strong{
+//     text-transform: uppercase;
+// }
