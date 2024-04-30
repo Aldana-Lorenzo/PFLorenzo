@@ -101,7 +101,7 @@
 .datos-random-container {
     @include flex(unset, center, center, 0);
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("../images/nosotros.jpg");
+        url("../images/nosotros.webp");
     object-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -169,21 +169,21 @@
             background-image: linear-gradient(145deg,
                     rgba(0, 0, 0, 0.2),
                     rgba(0, 0, 0, 0.5)),
-                url("../images/proyecto2.jpg");
+                url("../images/proyecto2.webp");
         }
 
         .card2 {
             background-image: linear-gradient(145deg,
                     rgba(0, 0, 0, 0.2),
                     rgba(0, 0, 0, 0.5)),
-                url("../images/proyecto7.jpg");
+                url("../images/proyecto7.webp");
         }
 
         .card3 {
             background-image: linear-gradient(145deg,
                     rgba(0, 0, 0, 0.2),
                     rgba(0, 0, 0, 0.5)),
-                url("../images/proyecto8.jpg");
+                url("../images/proyecto8.webp");
         }
 
         .card1,
