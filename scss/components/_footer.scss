@@ -120,15 +120,7 @@
                     }
 
                     button {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: #ffffff;
-                        font-weight: 600;
-                        border: none;
-                        border-radius: 7px;
-                        padding: 7px;
+                        @include btn(100%, unset, center, center, white, 600, none, 7px, 7px);
 
                         &:hover {
                             background-color: #0545a6;

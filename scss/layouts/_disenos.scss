@@ -21,6 +21,7 @@
             hr {
                 display: none;
             }
+
         }
 
         .swiper-wrapper {
@@ -44,14 +45,12 @@
 
     .swiper-button-next,
     .swiper-button-prev {
+        @include btn(50px, 50px, center, center, rgb(33,37,41), unset, none, 100%, 0);
         --swiper-navigation-size: 20px;
-        width: 30px;
-        height: 50px;
-        color: rgb(33, 37, 41);
-        background-color: rgba(255, 255, 255, 0.605);
-        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
         opacity: 0;
         transition: 0.5s;
+        margin-top: 0;
     }
 
     &:hover .swiper-button-prev,

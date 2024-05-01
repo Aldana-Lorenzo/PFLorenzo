@@ -1,5 +1,4 @@
 @media (min-width: 768px) {
-
     /* HEADER TABLET */
     .banner {
         height: 50vh;
@@ -105,7 +104,6 @@
                 .card-info {
                     position: relative;
                     flex-direction: column-reverse;
-                    /* Se vincula con el flex-direction del card-info mobile */
 
                     .card-titulo {
                         @include flex(row, flex-start, center, 15px);
@@ -500,12 +498,10 @@
                 }
             }
         }
-
     }
 }
 
 @media (min-width: 992px) {
-
     /* HEADER DESKTOP */
     .banner {
         height: 75vh;
@@ -525,7 +521,9 @@
 
     /* NAVBAR DESKTOP */
     .navbar {
+
         .container {
+
             .nav-link {
                 /* color: rgb(197, 197, 197); */
                 color: white;
@@ -751,6 +749,7 @@
                 position: relative;
 
                 .datos-titulo {
+
                     h2 {
                         font-size: 70px;
                         position: absolute;
@@ -879,5 +878,4 @@
             text-align: left;
         }
     }
-
 }

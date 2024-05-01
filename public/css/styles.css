@@ -316,10 +316,11 @@ ul {
 }
 .footer-container .footer .footer-newsletter .mail-newsletter .iconos-redes button {
   width: 100%;
+  height: unset;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  color: white;
   font-weight: 600;
   border: none;
   border-radius: 7px;
@@ -383,7 +384,6 @@ ul {
   gap: 0;
   width: 100%;
   height: 820px;
-  /* height: 500px; version desktop */
 }
 .nosotros-container .nosotros-index {
   display: flex;
@@ -392,7 +392,6 @@ ul {
   align-items: center;
   gap: 40px;
   width: 80%;
-  /* flex-direction: row; version desktop */
 }
 .nosotros-container .nosotros-index .nosotros-index-imagen img {
   width: 180px;
@@ -409,7 +408,6 @@ ul {
   gap: 30px;
   width: 90%;
   text-align: center;
-  /* padding: 0 60px 0 20px; version desktop */
 }
 .nosotros-container .nosotros-index .nosotros-index-texto .nosotros-index-info {
   display: flex;
@@ -431,15 +429,16 @@ ul {
   margin-top: 15px;
 }
 .nosotros-container .nosotros-index .nosotros-index-texto .button-index {
+  width: 100%;
+  height: 40px;
   display: flex;
-  flex-direction: unset;
   justify-content: center;
   align-items: center;
-  gap: 0;
-  width: 90px;
-  height: 40px;
-  border-radius: 7px;
+  color: white;
+  font-weight: 600;
   border: none;
+  border-radius: 7px;
+  padding: 5px 10px;
 }
 .nosotros-container .nosotros-index .nosotros-index-texto .button-index:hover {
   background-color: rgb(59, 63, 67);
@@ -456,12 +455,12 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 0;
+  width: 100%;
+  height: 500px;
   background: linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/nosotros.webp");
   object-position: center;
   background-attachment: fixed;
   background-size: cover;
-  width: 100%;
-  height: 500px;
 }
 .datos-random-container img {
   width: 100%;
@@ -477,7 +476,6 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  /* width: 60%; */
 }
 .datos-random-container .datos-random article {
   display: flex;
@@ -518,8 +516,6 @@ ul {
   align-items: center;
   gap: 0;
   width: 100%;
-  /* height: 650px; */
-  /* position: absolute; */
 }
 .secciones-container .secciones .secciones-descripcion {
   display: flex;
@@ -547,11 +543,11 @@ ul {
 .secciones-container .secciones .card1,
 .secciones-container .secciones .card2,
 .secciones-container .secciones .card3 {
+  width: 100%;
+  height: 420px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 100%;
-  height: 420px;
   text-decoration: none;
   padding: 25px;
 }
@@ -564,7 +560,6 @@ ul {
   align-items: unset;
   gap: 10px;
   height: 100%;
-  /* flex-direction: column; */
 }
 .secciones-container .secciones .card1 .card-info .card-titulo,
 .secciones-container .secciones .card2 .card-info .card-titulo,
@@ -655,17 +650,16 @@ ul {
   outline: none;
 }
 .newsletter-container .newsletter form button {
-  display: flex;
-  flex-direction: unset;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
   width: 120px;
   height: 40px;
-  font-weight: 700;
-  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
   border: none;
-  color: #ffffff;
+  border-radius: 7px;
+  padding: 5px 10px;
   margin-top: 15px;
 }
 .newsletter-container .newsletter form button:hover {
@@ -742,7 +736,6 @@ ul {
 }
 .empresa-banner .banner-hr hr {
   width: 35%;
-  /* opacity: 50%; */
 }
 .empresa-banner .empresa-banner-texto {
   display: flex;
@@ -894,7 +887,6 @@ ul {
   align-items: unset;
   gap: 40px;
   width: 80%;
-  /* height: 100%; */
 }
 .servicios-container .servicios-box .servicios-titulo {
   display: flex;
@@ -1124,14 +1116,21 @@ ul {
 }
 .swiper-container .swiper-button-next,
 .swiper-container .swiper-button-prev {
-  --swiper-navigation-size: 20px;
-  width: 30px;
+  width: 50px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(33, 37, 41);
-  background-color: rgba(255, 255, 255, 0.605);
-  border-radius: 5px;
+  font-weight: unset;
+  border: none;
+  border-radius: 100%;
+  padding: 0;
+  --swiper-navigation-size: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
   opacity: 0;
   transition: 0.5s;
+  margin-top: 0;
 }
 .swiper-container:hover .swiper-button-prev, .swiper-container:hover .swiper-button-next {
   opacity: 1;
@@ -1152,7 +1151,6 @@ ul {
   width: 100%;
   height: 100vh;
   background-image: url("../images/banner-contacto.webp");
-  /* object-fit: cover; */
   background-position: center;
   text-align: center;
   color: #ffffff;
@@ -1271,17 +1269,16 @@ ul {
   display: none;
 }
 .contacto-container .contacto form div button {
-  display: flex;
-  flex-direction: unset;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
   width: 100%;
   height: 40px;
-  padding: 5px 10px;
-  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
   border: none;
-  color: #ffffff;
+  border-radius: 7px;
+  padding: 5px 10px;
   margin-top: 10px;
 }
 .contacto-container .contacto form div button:hover {
@@ -1455,7 +1452,6 @@ ul {
   .secciones-container .secciones .card3 .card-info {
     position: relative;
     flex-direction: column-reverse;
-    /* Se vincula con el flex-direction del card-info mobile */
   }
   .secciones-container .secciones .card1 .card-info .card-titulo,
   .secciones-container .secciones .card2 .card-info .card-titulo,

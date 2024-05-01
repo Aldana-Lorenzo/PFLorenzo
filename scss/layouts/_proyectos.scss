@@ -19,7 +19,6 @@
             margin-top: 10px;
         }
     }
-
 }
 
 .proyectos-container {
@@ -109,6 +108,10 @@
                     }
 
                     button {
+                        // @include btn(70px, 25px center, center, white, 600, 1px solid white, 15px, 0);
+                        // font-size: 12px;
+                        // background: transparent;
+                        
                         @include flex(unset, center, center, 0);
                         width: 70px;
                         height: 25px;

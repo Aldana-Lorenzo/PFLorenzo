@@ -12,3 +12,16 @@
     object-fit: $object;
     object-position: $objposition;
 }
+
+@mixin btn($width, $height, $justify, $align, $color, $weight, $border, $radius, $padding) {
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;    
+    color: $color;
+    font-weight: $weight;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+}
