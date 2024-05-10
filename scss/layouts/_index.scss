@@ -22,7 +22,7 @@
             h2 {
                 color: #ffffff;
                 font-size: 18px;
-                font-weight: 800;
+                font-weight: 700;
             }
 
             p {
@@ -38,18 +38,13 @@
     height: 820px;
 
     .nosotros-index {
-        @include flex(column, center, center, 40px);
-        width: 80%;
-
-        .nosotros-index-imagen img {
-            @include img(180px, 180px, cover, center);
-            border-radius: 100%;
-        }
+        @include flex(column-reverse, center, center, 50px);
+        width: 100%;
 
         .nosotros-index-texto {
-            @include flex(column, center, center, 30px);
-            width: 90%;
-            text-align: center;
+            @include flex(column, center, center, 20px);
+            width: 70%;
+            text-align: justify;
 
             .nosotros-index-info {
                 display: flex;
@@ -60,22 +55,24 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 5px;
-                }
+                    gap: 8px;
+                    margin-bottom: 10px;
 
-                h2 {
-                    font-size: 18px;
-                    font-weight: 800;
-                }
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
 
-                hr {
-                    width: 80px;
-                    margin-top: 15px;
+                    hr {
+                        width: 50px;
+                        margin-top: 15px;
+                    }
                 }
             }
 
             .button-index {
-                @include btn(100%, 40px, center, center, white, 600, none, 7px, 5px 10px);
+                @include btn(120px, 40px, center, center, #ffffff, 600, none, 7px, 5px 10px);
+                margin-top: 10px;
 
                 &:hover {
                     background-color: rgb(59, 63, 67);
@@ -88,6 +85,11 @@
                 }
             }
         }
+
+        .nosotros-index-imagen img {
+            @include img(180px, 180px, cover, center);
+            border-radius: 100%;
+        }
     }
 }
 
@@ -96,7 +98,7 @@
     width: 100%;
     height: 500px;
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("../images/nosotros.webp");
+        url("../images/index-datos-random.webp");
     object-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -150,30 +152,30 @@
             margin-bottom: 60px;
 
             h2 {
-                font-size: 20px;
-                font-weight: 800;
+                font-size: 18px;
+                font-weight: 700;
             }
         }
 
         .card1 {
             background-image: linear-gradient(145deg,
                     rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.5)),
-                url("../images/proyecto2.webp");
+                    rgba(0, 0, 0, 0.2)),
+                url("../images/index-proyectos.webp");
         }
 
         .card2 {
             background-image: linear-gradient(145deg,
                     rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.5)),
-                url("../images/proyecto7.webp");
+                    rgba(0, 0, 0, 0.2)),
+                url("../images/index-disenos.webp");
         }
 
         .card3 {
             background-image: linear-gradient(145deg,
                     rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.5)),
-                url("../images/proyecto8.webp");
+                    rgba(0, 0, 0, 0.2)),
+                url("../images/index-contacto.webp");
         }
 
         .card1,
@@ -186,6 +188,7 @@
             background-position: center center;
             text-decoration: none;
             padding: 25px;
+            transition: 2s;
 
             .card-info {
                 @include flex(column-reverse, space-between, unset, 10px);
@@ -226,7 +229,6 @@
             color: #ffffff;
         }
     }
-
 }
 
 .newsletter-container {
@@ -247,7 +249,7 @@
             text-align: center;
 
             h2 {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 700;
             }
         }
@@ -267,8 +269,9 @@
             }
 
             button {
-                @include btn(120px, 40px, center, center, white, 600, none, 7px, 5px 10px);
+                @include btn(100%, 40px, center, center, #ffffff, 600, none, 7px, 5px 10px);
                 margin-top: 15px;
+                max-width: 350px;
 
                 &:hover {
                     background-color: rgb(59, 63, 67);

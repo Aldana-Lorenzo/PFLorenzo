@@ -1,11 +1,9 @@
-$colors: (
+$bc-btn: (
     dark: #212529,
-    // dark-shadow: #9a9a9a,
     light-blue: #0056d7,
-    // dark-blue: #0545a6,
 );
 
-@each $key, $valor in $colors {
+@each $key, $valor in $bc-btn {
     .bc-#{$key}{
         background-color: $valor;
     }

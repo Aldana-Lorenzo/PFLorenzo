@@ -24,11 +24,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: 18px;
-
-                h2 {
-                    font-size: 22px;
-                    font-weight: 800;
-                }
             }
 
             .datos-box {
@@ -38,7 +33,7 @@
 
                 .datos {
                     @include flex(unset, flex-start, center, 15px);
-                    
+
                     .datos-icono {
                         width: 33px;
                         height: 33px;
@@ -55,28 +50,6 @@
                             align-items: flex-start;
                         }
                     }
-
-                    .datos-texto {
-                        display: flex;
-                        flex-direction: column;
-
-                        h2 {
-                            font-size: 16px;
-                            font-weight: 700;
-                        }
-                    }
-
-                }
-            }
-
-            .datos-titulo-secundario {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-
-                h2 {
-                    font-size: 18px;
-                    font-weight: 700;
                 }
             }
         }
@@ -100,7 +73,7 @@
 
             div {
                 @include flex(unset, space-between, center, 15px);
-                
+
                 input {
                     width: 45%;
                 }
@@ -126,7 +99,7 @@
                 }
 
                 button {
-                    @include btn(100%, 40px, center, center, white, 600, none, 7px, 5px 10px);
+                    @include btn(100%, 40px, center, center, #ffffff, 600, none, 7px, 5px 10px);
                     margin-top: 10px;
 
                     &:hover {
@@ -192,7 +165,7 @@
             a {
                 text-decoration: none;
                 color: #212529;
-                font-weight: 600;
+                font-weight: 700;
                 border: 2px solid #212529;
                 padding: 8px;
                 transition: 0.5s;

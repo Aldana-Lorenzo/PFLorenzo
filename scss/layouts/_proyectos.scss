@@ -1,8 +1,8 @@
 .proyectos-encabezado {
     @include flex(column, flex-end, center, 0);
-    width: 100%;
-    height: 160px;
-    margin: 15px 0;
+    width: 90%;
+    height: 180px;
+    margin: 15px auto;
 
     div {
         @include flex(column, center, center, 8px);
@@ -97,10 +97,10 @@
                     opacity: 0;
                     transition: 0.8s;
 
-                    h2 {
-                        color: #ffffff;
+                    h2 {                        
                         font-size: 16px;
-                        font-weight: 600;
+                        font-weight: 700;
+                        color: #ffffff;
                     }
 
                     p {
@@ -108,23 +108,14 @@
                     }
 
                     button {
-                        // @include btn(70px, 25px center, center, white, 600, 1px solid white, 15px, 0);
-                        // font-size: 12px;
-                        // background: transparent;
-                        
-                        @include flex(unset, center, center, 0);
-                        width: 70px;
-                        height: 25px;
+                        @include btn(70px, 25px, center, center, #ffffff, unset, 1px solid #ffffff, 15px, 0);
                         font-size: 12px;
                         background: transparent;
-                        color: #ffffff;
-                        border: 1px solid #ffffff;
-                        border-radius: 15px;
 
                         &:hover {
-                            background: #212529;
-                            color: #ffffff;
-                            border: 1px solid #212529;
+                            background: #ffffff;
+                            color: #212529;
+                            border: none;
                         }
                     }
 
@@ -142,9 +133,9 @@
 
     .mas-proyectos {
         @include flex(column, center, center, 10px);
-    
+
         span {
-            font-weight: 600;
+            font-weight: 700;
         }
     }
 }

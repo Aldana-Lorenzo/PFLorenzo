@@ -15,7 +15,7 @@
 
         &:checked~.btn2-mas .fa-solid {
             transform: rotate(45deg);
-            font-size: 25px;
+            font-size: 24px;
         }
     }
 
@@ -32,12 +32,12 @@
     .btn2-mas i {
         width: 50px;
         height: 50px;
-        display: flex;        
+        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         color: #ffffff;
-        text-decoration: none;        
+        text-decoration: none;
         line-height: 50px;
         border-radius: 100%;
         box-shadow: 1px 1px 10px rgba(33, 33, 33, 0.9);
