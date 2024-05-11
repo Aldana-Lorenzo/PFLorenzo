@@ -35,7 +35,7 @@
 .nosotros-container {
     @include flex(unset, center, center, 0);
     width: 100%;
-    height: 820px;
+    height: 900px;
 
     .nosotros-index {
         @include flex(column-reverse, center, center, 50px);
@@ -154,6 +154,11 @@
             h2 {
                 font-size: 18px;
                 font-weight: 700;
+            }
+
+            hr {
+                width: 50px;
+                margin-top: 10px;
             }
         }
 
